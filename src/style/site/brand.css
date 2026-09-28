@@ -1,0 +1,108 @@
+.site-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4em;
+  color: var(--site-white);
+  line-height: 1;
+}
+
+.site-emblem {
+  flex: none;
+  width: 1.5em;
+  height: 1.5em;
+  overflow: visible;
+}
+
+.site-emblem-stop-light {
+  stop-color: var(--site-warm-light);
+}
+
+.site-emblem-stop-warm {
+  stop-color: var(--site-warm);
+}
+
+.site-emblem-stop-violet {
+  stop-color: var(--site-violet);
+}
+
+.site-emblem-stop-core-inner {
+  stop-color: var(--site-ink-glow);
+}
+
+.site-emblem-stop-core-outer {
+  stop-color: var(--site-ink);
+}
+
+.site-emblem-frame {
+  stroke-width: 3;
+}
+
+.site-emblem-inner {
+  fill: none;
+  stroke: rgba(255, 255, 255, 0.16);
+  stroke-width: 1.5;
+}
+
+.site-emblem-orbit {
+  fill: none;
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  opacity: 0.8;
+}
+
+.site-emblem-spark {
+  fill: var(--site-warm);
+}
+
+.site-logo-wordmark {
+  font-family: var(--site-font-brand);
+  font-weight: 600;
+  letter-spacing: -0.035em;
+  white-space: nowrap;
+}
+
+.site-logo-wordmark-accent {
+  background: linear-gradient(115deg, var(--site-warm-light), var(--site-warm) 45%, var(--site-violet));
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.site-logo-header {
+  font-size: 1.45rem;
+}
+
+.site-logo-header .site-emblem {
+  width: 1.55em;
+  height: 1.55em;
+}
+
+.site-logo-hero {
+  gap: 0.16em;
+  font-size: clamp(3.4rem, 12.5vw, 13.5rem);
+}
+
+.site-logo-hero .site-emblem {
+  width: 1em;
+  height: 1em;
+  filter: drop-shadow(0 0.05em 0.16em rgba(0, 0, 0, 0.55)) drop-shadow(0 0 0.3em rgba(245, 173, 120, 0.28));
+  animation: site-emblem-float 7s ease-in-out infinite;
+}
+
+.site-logo-hero .site-logo-wordmark {
+  filter: drop-shadow(0 0.04em 0.14em rgba(0, 0, 0, 0.6));
+}
+
+.site-logo-footer {
+  font-size: clamp(2rem, 4vw, 3.4rem);
+}
+
+:root[data-site-viewport='compact'] .site-logo-hero {
+  flex-direction: column;
+  gap: 0.14em;
+  font-size: clamp(3rem, 17vw, 5.2rem);
+}
+
+:root[data-site-viewport='compact'] .site-logo-header {
+  font-size: 1.2rem;
+}

@@ -1,0 +1,9 @@
+{
+  "$schema": "./node_modules/oxlint/configuration_schema.json",
+  "plugins": ["typescript", "oxc"],
+  "ignorePatterns": ["dist", "node_modules", "tmp-ai"],
+  "rules": {
+    "typescript/no-unused-vars": "error",
+    "oxc/no-async-await": "off"
+  }
+}

@@ -1,0 +1,72 @@
+.site-soul-field {
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.site-soul-field-tilt {
+  position: absolute;
+  inset: -45% -30%;
+  display: flex;
+  justify-content: center;
+  gap: var(--site-card-gap);
+  transform: rotate(-14deg);
+}
+
+.site-soul-field-column {
+  flex: 1 1 0;
+  min-width: 0;
+  max-width: 17rem;
+}
+
+.site-soul-field-column:nth-child(even) {
+  margin-top: 9%;
+}
+
+.site-soul-field-track {
+  display: flex;
+  flex-direction: column;
+  animation: site-field-rise 66s linear infinite;
+  will-change: transform;
+}
+
+.site-soul-field-column:nth-child(even) .site-soul-field-track {
+  animation-name: site-field-fall;
+  animation-duration: 80s;
+}
+
+.site-soul-field-column:nth-child(3n) .site-soul-field-track {
+  animation-duration: 92s;
+}
+
+.site-soul-card {
+  display: block;
+  margin-bottom: var(--site-card-gap);
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 14px 30px;
+  background: linear-gradient(160deg, var(--site-ink-glow), var(--site-ink-soft));
+  box-shadow: 0 24px 50px rgba(0, 0, 0, 0.45);
+}
+
+.site-portrait {
+  display: block;
+  background: var(--site-ink-soft);
+  object-fit: cover;
+}
+
+.site-soul-card .site-portrait {
+  width: 100%;
+  height: 100%;
+  object-position: 50% 18%;
+}
+
+.site-portrait[data-variant='showcase'] {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 4;
+  object-position: 50% 18%;
+}

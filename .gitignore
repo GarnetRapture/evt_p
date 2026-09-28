@@ -1,0 +1,12 @@
+node_modules/
+dist/
+*.local
+.cache/
+.vite/
+.eslintcache
+.oxlintcache
+*.tsbuildinfo
+tmp-ai/
+logs/
+*.log
+public/download/*.zip
