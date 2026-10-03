@@ -16,7 +16,6 @@ export function useSiteLocale(): SiteLocaleState {
     const active = locale();
     document.documentElement.lang = active;
     window.localStorage.setItem(SITE_LOCALE_SETTING.storageKey, active);
-    document.title = text().heroTagline;
     const description = document.querySelector('meta[name="description"]');
     document.querySelector('meta[property="og:locale"]')?.setAttribute('content', active === 'ko' ? 'ko_KR' : 'en_US');
     const baseUrl = new URL(window.location.href);
@@ -25,7 +24,9 @@ export function useSiteLocale(): SiteLocaleState {
     for (const language of SITE_LOCALE_SETTING.alternateLanguages) {
       const link = document.querySelector<HTMLLinkElement>(`link[rel="alternate"][hreflang="${language}"]`) ?? document.createElement('link');
       const alternate = new URL(baseUrl.href);
-      if (isSiteLocale(language)) alternate.searchParams.set(SITE_LOCALE_SETTING.queryKey, language);
+      if (isSiteLocale(language) && language !== SITE_LOCALE_SETTING.defaultLocale) {
+        alternate.searchParams.set(SITE_LOCALE_SETTING.queryKey, language);
+      }
       link.rel = 'alternate';
       link.hreflang = language;
       link.href = alternate.href;
@@ -34,10 +35,10 @@ export function useSiteLocale(): SiteLocaleState {
     const canonical = document.querySelector<HTMLLinkElement>('link[rel="canonical"]') ?? document.createElement('link');
     canonical.rel = 'canonical';
     const canonicalUrl = new URL(baseUrl.href);
-    canonicalUrl.searchParams.set(SITE_LOCALE_SETTING.queryKey, active);
+    if (active !== SITE_LOCALE_SETTING.defaultLocale) canonicalUrl.searchParams.set(SITE_LOCALE_SETTING.queryKey, active);
     canonical.href = canonicalUrl.href;
     if (!canonical.isConnected) document.head.append(canonical);
-    if (description !== null) description.setAttribute('content', text().heroDescription);
+    if (description !== null) description.setAttribute('content', text().metaDescription);
   });
 
   const select = (value: SiteLocale): void => {

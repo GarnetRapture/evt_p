@@ -3,6 +3,10 @@
 @import './hero.css';
 @import './soul.css';
 @import './home.css';
+@import './music.css';
+@import './journey.css';
+@import './lounge.css';
+@import './mephisto.css';
 @import './ui.css';
 
 :root {
@@ -93,6 +97,12 @@
 html {
   scroll-behavior: smooth;
   scroll-padding-top: var(--site-header-height);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
 }
 
 body {

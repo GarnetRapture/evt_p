@@ -3,10 +3,13 @@ name: Pages
 on:
   push:
     branches: [main]
+  issues:
+    types: [opened, edited, reopened, closed, deleted, transferred]
   workflow_dispatch:
 
 permissions:
   contents: read
+  issues: read
   pages: write
   id-token: write
 
@@ -27,6 +30,9 @@ jobs:
           node-version: 24
           cache: npm
       - run: npm ci
+      - run: npm run issues:sync
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
       - run: npm run build
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v4

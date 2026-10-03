@@ -1,0 +1,230 @@
+.site-mephisto-stage {
+  position: fixed;
+  z-index: 45;
+  inset: 0;
+  width: 100%;
+  height: 100dvh;
+  pointer-events: none;
+  animation: site-companion-arrive 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.site-mephisto-viewport {
+  position: fixed;
+  z-index: 2;
+  inset: 0;
+  width: 100%;
+  height: 100dvh;
+  pointer-events: none;
+}
+
+.site-mephisto-scrim {
+  position: fixed;
+  z-index: 1;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  background: rgba(5, 10, 24, 0.68);
+  backdrop-filter: blur(5px);
+  cursor: default;
+  pointer-events: auto;
+}
+
+.site-mephisto-scrim[hidden] {
+  display: none;
+}
+
+.site-mephisto-viewport canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.site-mephisto-stage[data-ready='true'] .site-mephisto-viewport canvas {
+  opacity: 1;
+}
+
+.site-mephisto-drag {
+  position: fixed;
+  z-index: 3;
+  right: 1rem;
+  bottom: 1rem;
+  width: 15rem;
+  height: 23rem;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: grab;
+  pointer-events: auto;
+  touch-action: none;
+}
+
+.site-mephisto-drag:active {
+  cursor: grabbing;
+}
+
+.site-mephisto-stage[data-ready='false'] .site-mephisto-drag {
+  display: none;
+}
+
+.site-mephisto-bubble {
+  position: fixed;
+  z-index: 3;
+  right: 16rem;
+  bottom: 18rem;
+  max-width: 18rem;
+  margin: 0;
+  padding: 0.75rem 1rem;
+  border: 1px solid rgba(245, 173, 120, 0.48);
+  border-radius: 16px 16px 4px 16px;
+  background: rgba(11, 16, 32, 0.93);
+  color: var(--site-white);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25);
+  font-size: 0.82rem;
+  font-weight: 700;
+  line-height: 1.55;
+  word-break: keep-all;
+  backdrop-filter: blur(10px);
+  pointer-events: auto;
+}
+
+.site-mephisto-stage[data-open='true'] .site-mephisto-bubble {
+  display: none;
+}
+
+.site-mephisto-bubble[hidden] {
+  display: none;
+}
+
+.site-mephisto-toggle {
+  position: fixed;
+  z-index: 5;
+  right: 16rem;
+  bottom: 14rem;
+  display: grid;
+  place-items: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  border: 1px solid var(--site-warm);
+  border-radius: 50%;
+  background: var(--site-ink);
+  color: var(--site-warm-light);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.3);
+  font-size: 1.2rem;
+  line-height: 1;
+  cursor: pointer;
+  pointer-events: auto;
+}
+
+.site-mephisto-controls {
+  position: fixed;
+  z-index: 4;
+  right: 16rem;
+  bottom: 1rem;
+  width: min(20rem, calc(100vw - 2rem));
+  max-height: calc(100dvh - 2rem);
+  padding: 1rem;
+  overflow-y: auto;
+  border: 1px solid rgba(245, 173, 120, 0.55);
+  border-radius: 15px;
+  background: #11182a;
+  color: var(--site-white);
+  box-shadow: 0 24px 55px rgba(0, 0, 0, 0.4);
+  scrollbar-color: var(--site-warm) transparent;
+  pointer-events: auto;
+}
+
+.site-mephisto-controls[hidden] {
+  display: none;
+}
+
+.site-mephisto-title {
+  margin: 0 2.3rem 0 0;
+  font-family: var(--site-font-display);
+  font-size: 0.92rem;
+  line-height: 1.3;
+}
+
+.site-mephisto-voice-note,
+.site-mephisto-status {
+  margin: 0.55rem 0 0;
+  color: var(--site-muted-light);
+  font-size: 0.78rem;
+  line-height: 1.55;
+  word-break: keep-all;
+}
+
+.site-mephisto-status:not([hidden]) {
+  color: var(--site-warm-light);
+}
+
+.site-mephisto-actions {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.4rem;
+  margin-top: 0.7rem;
+}
+
+.site-mephisto-action {
+  min-height: 2.35rem;
+  padding: 0.35rem 0.45rem;
+  border: 1px solid rgba(226, 232, 246, 0.3);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--site-white);
+  font: inherit;
+  font-size: 0.73rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.site-mephisto-action:hover,
+.site-mephisto-action[aria-pressed='true'] {
+  border-color: var(--site-warm);
+  background: rgba(245, 173, 120, 0.18);
+}
+
+.site-mephisto-caption {
+  min-height: 2.6rem;
+  margin: 0.85rem 0 0;
+  padding: 0.7rem 0.85rem;
+  border-left: 3px solid var(--site-warm);
+  border-radius: 7px;
+  background: rgba(255, 255, 255, 0.06);
+  font-size: 0.82rem;
+  line-height: 1.6;
+  word-break: keep-all;
+}
+
+@keyframes site-companion-arrive {
+  from { opacity: 0; transform: translateY(2rem); }
+}
+
+:root[data-site-viewport='compact'] .site-mephisto-stage {
+  width: 100%;
+}
+
+:root[data-site-viewport='compact'] .site-mephisto-bubble {
+  max-width: 12.5rem;
+  padding: 0.55rem 0.7rem;
+  font-size: 0.7rem;
+}
+
+:root[data-site-viewport='compact'] .site-mephisto-drag {
+  right: 0.5rem;
+  bottom: 0.5rem;
+  width: 10rem;
+  height: 16rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .site-mephisto-stage {
+    animation: none;
+  }
+
+  .site-mephisto-viewport canvas {
+    transition: none;
+  }
+}

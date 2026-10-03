@@ -5,4 +5,5 @@ import '@evtp/style/site/site.css';
 const root = document.getElementById('root');
 if (root === null) throw new Error('Root element not found');
 
+root.replaceChildren();
 render(() => <SiteRoot />, root);

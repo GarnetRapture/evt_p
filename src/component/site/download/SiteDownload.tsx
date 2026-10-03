@@ -8,6 +8,8 @@ import { resolveReleaseAssetUrl } from '@evtp/logic/site/download/resolveRelease
 import type { SiteLocaleSectionProps } from '@evtp/type/component/site/SiteLocaleSectionProps';
 import type { DownloadCatalog } from '@evtp/type/site/download/DownloadCatalog';
 import { For, Show } from 'solid-js';
+import poolSceneUrl from '@evtp/asset/bg/Talk_BG_Pool_Day.webp';
+import { SiteSectionScene } from '@evtp/component/site/scene/SiteSectionScene';
 
 export function SiteDownload(props: SiteLocaleSectionProps) {
   const catalog = catalogData as DownloadCatalog;
@@ -20,11 +22,14 @@ export function SiteDownload(props: SiteLocaleSectionProps) {
   return (
     <section class={SITE_CLASS_NAME.download} id={SITE_SECTION_ID.download}>
       <div class={SITE_CLASS_NAME.sectionShell}>
-        <div class={SITE_CLASS_NAME.sectionIntro} data-motion="reveal">
-          <p class={SITE_CLASS_NAME.eyebrow}>{text().downloadEyebrow}</p>
-          <h2 class={SITE_CLASS_NAME.sectionTitle}>{text().downloadTitle}</h2>
-          <p class={SITE_CLASS_NAME.sectionDescription}>{text().downloadDescription}</p>
-        </div>
+        <SiteSectionScene imageUrl={poolSceneUrl}>
+          <div class={SITE_CLASS_NAME.sectionIntro}>
+            <p class={SITE_CLASS_NAME.eyebrow}>{text().downloadEyebrow}</p>
+            <h2 class={SITE_CLASS_NAME.sectionTitle}>{text().downloadTitle}</h2>
+            <p class={SITE_CLASS_NAME.sectionSubtitle}>{text().downloadSubtitle}</p>
+            <p class={SITE_CLASS_NAME.sectionDescription}>{text().downloadDescription}</p>
+          </div>
+        </SiteSectionScene>
         <div class={SITE_CLASS_NAME.downloadGrid}>
           <For each={DOWNLOAD_PLATFORM}>{(platform) => (
             <article class={SITE_CLASS_NAME.downloadCard} data-platform={platform.id} data-supported={platform.supported} data-motion="reveal">

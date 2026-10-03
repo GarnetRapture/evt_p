@@ -1,10 +1,11 @@
 import { For } from 'solid-js';
 import type { SiteSectionProps } from '@evtp/type/component/site/SiteSectionProps';
 import { SITE_CLASS_NAME } from '@evtp/constant/ui/class/SITE_CLASS_NAME';
+import { SITE_SECTION_ID } from '@evtp/constant/site/section/SITE_SECTION_ID';
 
 export function SiteSpecs(props: SiteSectionProps) {
   return (
-    <section class={SITE_CLASS_NAME.specs}>
+    <section class={SITE_CLASS_NAME.specs} id={SITE_SECTION_ID.specs}>
       <div class={SITE_CLASS_NAME.sectionShell}>
         <div class={SITE_CLASS_NAME.sectionIntro} data-motion="reveal">
           <p class={SITE_CLASS_NAME.eyebrow}>{props.text.specEyebrow}</p>
@@ -18,6 +19,10 @@ export function SiteSpecs(props: SiteSectionProps) {
             </div>
           )}</For>
         </dl>
+        <div class={SITE_CLASS_NAME.specRecommended}>
+          <h3>{props.text.specRecommendedTitle}</h3>
+          <p>{props.text.specRecommendedBody}</p>
+        </div>
       </div>
     </section>
   );

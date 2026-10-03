@@ -1,2 +1,3 @@
 User-agent: *
 Allow: /
+Sitemap: https://evt.everlib.pro/sitemap.xml

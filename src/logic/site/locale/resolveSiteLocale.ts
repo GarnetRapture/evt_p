@@ -5,7 +5,6 @@ export function resolveSiteLocale(): SiteLocale {
   const requested = [
     new URLSearchParams(window.location.search).get(SITE_LOCALE_SETTING.queryKey),
     window.localStorage.getItem(SITE_LOCALE_SETTING.storageKey),
-    ...navigator.languages.map((language) => language.slice(0, 2).toLowerCase()),
   ];
   for (const candidate of requested) {
     if (candidate === 'ko' || candidate === 'en') return candidate;

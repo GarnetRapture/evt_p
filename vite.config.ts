@@ -21,5 +21,15 @@ export default defineConfig({
     cssCodeSplit: true,
     assetsInlineLimit: 4096,
     modulePreload: { polyfill: false },
+    rolldownOptions: {
+      output: {
+        codeSplitting: {
+          groups: [
+            { name: 'three-core', test: /[\\/]three[\\/]build[\\/]three\.core\.js$/ },
+            { name: 'three-renderer', test: /[\\/]three[\\/]build[\\/]three\.module\.js$/ },
+          ],
+        },
+      },
+    },
   },
 });

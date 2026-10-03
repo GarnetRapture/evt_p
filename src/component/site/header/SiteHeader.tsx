@@ -3,6 +3,8 @@ import type { SiteHeaderProps } from '@evtp/type/component/site/SiteHeaderProps'
 import { SITE_SECTION_ID } from '@evtp/constant/site/section/SITE_SECTION_ID';
 import { SITE_CLASS_NAME } from '@evtp/constant/ui/class/SITE_CLASS_NAME';
 import { SiteLogo } from '@evtp/component/site/brand/SiteLogo';
+import { SiteMusicPlayer } from '@evtp/component/site/music/SiteMusicPlayer';
+import { SitePositionBar } from '@evtp/component/site/journey/SitePositionBar';
 import { useSiteScrolled } from '@evtp/hook/site/scroll/useSiteScrolled';
 import { useSiteViewport } from '@evtp/hook/site/viewport/useSiteViewport';
 
@@ -36,6 +38,7 @@ export function SiteHeader(props: SiteHeaderProps) {
         <a href={`#${SITE_SECTION_ID.top}`} class={SITE_CLASS_NAME.brand} aria-label={text().brandName}>
           <SiteLogo variant="header" text={text()} />
         </a>
+        <SiteMusicPlayer text={text()} />
         <button
           type="button"
           class={SITE_CLASS_NAME.navToggle}
@@ -49,18 +52,7 @@ export function SiteHeader(props: SiteHeaderProps) {
           <span class={SITE_CLASS_NAME.navToggleBar} />
         </button>
         <nav class={SITE_CLASS_NAME.nav} id={SITE_SECTION_ID.navigation} aria-label={text().navLabel}>
-          <ul class={SITE_CLASS_NAME.navList}>
-            <li>
-              <a class={SITE_CLASS_NAME.navLink} href={`#${SITE_SECTION_ID.features}`} onClick={() => setMenuOpen(false)}>
-                {text().navGame}
-              </a>
-            </li>
-            <li>
-              <a class={SITE_CLASS_NAME.navLink} href={`#${SITE_SECTION_ID.download}`} onClick={() => setMenuOpen(false)}>
-                {text().navDownload}
-              </a>
-            </li>
-          </ul>
+          <SitePositionBar text={text()} onNavigate={() => setMenuOpen(false)} />
           <div class={SITE_CLASS_NAME.headerTools}>
             <div class={SITE_CLASS_NAME.localeSwitch} role="group" aria-label={text().navLanguage}>
               <button

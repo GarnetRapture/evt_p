@@ -32,6 +32,19 @@
   will-change: transform;
 }
 
+.site-soul-field[data-active='false'] .site-soul-field-track {
+  animation-play-state: paused;
+  will-change: auto;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .site-soul-field,
+  .site-soul-field-track {
+    animation: none;
+    transition: none;
+  }
+}
+
 .site-soul-field-column:nth-child(even) .site-soul-field-track {
   animation-name: site-field-fall;
   animation-duration: 80s;
