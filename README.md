@@ -6,11 +6,11 @@
 
 *구원자와 정령이 함께하는 파티 던전 게임*
 
-[![version](https://img.shields.io/badge/download-V0.0.1-863bff?style=flat-square)](https://github.com/GarnetRapture/evt_p/releases/tag/V0.0.1)
+[![version](https://img.shields.io/badge/download-V0.0.2-863bff?style=flat-square)](https://github.com/GarnetRapture/evt_p/releases/tag/V0.0.2)
 [![platform](https://img.shields.io/badge/platform-Windows%2010%20%7C%2011-0078D4?style=flat-square)](#ko-requirements)
 [![page](https://img.shields.io/badge/page-evt.everlib.pro-47bfff?style=flat-square)](https://evt.everlib.pro)
 
-**[안내 페이지](https://evt.everlib.pro)** · **[V0.0.1 내려받기](https://github.com/GarnetRapture/evt_p/releases/download/V0.0.1/Release.zip)**
+**[안내 페이지](https://evt.everlib.pro)** · **[V0.0.2 내려받기](https://github.com/GarnetRapture/evt_p/releases/download/V0.0.2/Another-V0.0.2-windows-x64.zip)**
 
 [한국어](#ko) · [English](README.en.md) · [简体中文](README.zh.md)
 
@@ -21,7 +21,7 @@
 <a id="ko"></a>
 ## 한국어
 
-구원자님, 메피스토펠레스입니다. V0.0.1은 개발 초기의 모습을 그대로 공개한 첫 버전이에요. 로비에서 정령을 만나고 연습장에서 기술을 써 보실 수 있지만, 맵과 던전은 아직 열리지 않았습니다. 보내주신 의견을 바탕으로 V0.0.2를 준비하고 있습니다.
+구원자님, 메피스토펠레스입니다. V0.0.1은 개발 초기의 모습을 그대로 공개한 첫 버전이에요. 로비에서 정령을 만나고 연습장에서 기술을 써 보실 수 있지만, 맵과 던전은 아직 열리지 않았습니다. 보내주신 의견을 바탕으로 V0.0.2를 공개했습니다.
 
 ### 게임 소개
 
@@ -33,31 +33,31 @@
 
 ### V0.0.1 첫 공개본
 
-2026-09-29에 공개했습니다. 지금 내려받을 수 있는 버전은 **V0.0.1**입니다. Windows 10·11(64비트)에서 실행되며, 이 첫 배포본은 DirectX 12와 NVIDIA 그래픽카드가 필요합니다. Linux와 macOS에서는 실행되지 않습니다.
+2026-09-29에 공개했고 지금도 [릴리즈 페이지](https://github.com/GarnetRapture/evt_p/releases)에서 받을 수 있습니다. Windows 10·11(64비트)에서 실행되며, 이 첫 배포본은 DirectX 12와 NVIDIA 그래픽카드가 필요합니다. Linux와 macOS에서는 실행되지 않습니다.
 
 ### 시작 안내
 
-1. [V0.0.1 압축 파일](https://github.com/GarnetRapture/evt_p/releases/download/V0.0.1/Release.zip)을 받아 압축을 풀어 주세요.
+1. [V0.0.2 압축 파일](https://github.com/GarnetRapture/evt_p/releases/download/V0.0.2/Another-V0.0.2-windows-x64.zip)을 받아 압축을 풀어 주세요.
 2. 폴더 안의 `ev_launcher.exe`를 실행해 주세요.
-3. 처음에는 빨간 **설치** 버튼을 눌러 게임 자료(약 4.2 GB)를 받아 주세요. 진행 상황은 런처에서 볼 수 있습니다.
-4. 설치가 끝나면 **게임 시작**을 눌러 주세요. 게임은 전체화면으로 열립니다.
+3. 처음에는 **설치** 버튼을 눌러 게임 데이터 팩(약 4.4 GB)을 받아 주세요. 런처가 필요한 팩만 받으며 진행 상황을 보여 줍니다.
+4. 설치가 끝나면 **게임 시작**을 눌러 주세요. 화면 모드(전용 전체화면·테두리 없음·창 모드)는 환경설정에서 고를 수 있습니다.
 
 <a id="ko-requirements"></a>
-### 첫 공개본의 필요 사양
+### V0.0.2 필요 사양
 
 | 항목 | 내용 |
 | --- | --- |
-| 운영체제 | Windows 10·11 (64비트) |
-| 그래픽 | DirectX 12(셰이더 모델 6.6) 지원 NVIDIA GeForce GTX 16·RTX 20 시리즈 이상 |
-| 드라이버 | 최신 NVIDIA 그래픽 드라이버 |
-| 저장 공간 | 약 4.3 GB (게임 자료 약 4.2 GB 포함) |
-| 인터넷 | 처음 설치할 때 게임 자료를 받는 데 필요 |
+| 운영체제 | Windows 10 1709(빌드 16299)부터 Windows 11까지 (64비트) |
+| 그래픽 | Direct3D 12(기능 수준 11_0 이상) 또는 Direct3D 11(기능 수준 10_0 이상). 둘 다 쓸 수 없으면 CPU(three.js) 렌더로 실행 |
+| 드라이버 | 그래픽카드 제조사의 최신 드라이버 |
+| 저장 공간 | 약 4.5 GB (게임 데이터 팩 약 4.4 GB 포함) |
+| 인터넷 | 처음 설치할 때 게임 데이터 팩을 받는 데 필요 |
 
 필요한 구성 요소는 [DirectX 12](https://support.microsoft.com/help/179113), [NVIDIA 그래픽 드라이버](https://www.nvidia.com/Download/index.aspx), [Microsoft Edge WebView2 런타임](https://developer.microsoft.com/microsoft-edge/webview2/consumer/), [Visual C++ 재배포 패키지 (x64)](https://aka.ms/vc14/vc_redist.x64.exe)입니다. DirectX 12는 Windows에 포함되며, Visual C++ 구성 요소는 배포 파일에도 들어 있습니다. 없는 항목만 공식 안내에서 받아 주세요.
 
-### V0.0.2 패치노트 초안
+### V0.0.2 패치노트
 
-V0.0.2에는 첫 공개본의 테스터 제보에 따른 실행·화면·음악 수정과 영지의 정령 생활·나들이까지 담습니다. 아래 변경은 개발 코드에 연결되어 있으며, 실제 동작을 출시 전에 검증합니다.
+V0.0.2에는 첫 공개본의 테스터 제보에 따른 실행·화면·음악 수정과 일반 사용자 개발 방향 공지의 구현이 담겼습니다. 아래 변경은 V0.0.2 Windows 배포본에 들어 있습니다.
 
 - AMD 그래픽카드에서 NVIDIA 전용 계산을 시작하지 않도록 경로를 분리했습니다. 시작 직후 종료되는 원인은 아직 확인 중입니다. (T-A1)
 - 첫 화면 방식이 맞지 않으면 다른 방식을 살피는 경로를 연결했습니다. 실행 불가 기기에서 확인이 필요합니다. (T-B1)
@@ -85,7 +85,7 @@ V0.0.2의 동작을 검증해 공개한 뒤에도 새로운 문제를 발견하�
 <a id="en"></a>
 ## English
 
-Savior, I am Mephistopheles. V0.0.1 was our first release, shared as it stood in early development. You can meet the Souls in the lobby and try their skills in the practice arena. Maps and dungeons are not open yet. We are preparing V0.0.2 from the reports you sent us.
+Savior, I am Mephistopheles. V0.0.1 was our first release, shared as it stood in early development. You can meet the Souls in the lobby and try their skills in the practice arena. Maps and dungeons are not open yet. V0.0.2 is now released, shaped by the reports you sent us.
 
 ### About the game
 
@@ -97,30 +97,30 @@ On the guide page, the base Mephistopheles model moves between section positions
 
 ### V0.0.1 first release
 
-Released on 2026-09-29. **V0.0.1** is the version available to download. This first release runs on Windows 10 or 11 (64-bit) and requires DirectX 12 and an NVIDIA graphics card. It does not run on Linux or macOS.
+Released on 2026-09-29 and still available on the [releases page](https://github.com/GarnetRapture/evt_p/releases). This first release runs on Windows 10 or 11 (64-bit) and requires DirectX 12 and an NVIDIA graphics card. It does not run on Linux or macOS.
 
 ### Getting started
 
-1. [Download the V0.0.1 archive](https://github.com/GarnetRapture/evt_p/releases/download/V0.0.1/Release.zip) and unzip it.
+1. [Download the V0.0.2 archive](https://github.com/GarnetRapture/evt_p/releases/download/V0.0.2/Another-V0.0.2-windows-x64.zip) and unzip it.
 2. Run `ev_launcher.exe` from the unzipped folder.
-3. On your first run, press the red **Install** button to download about 4.2 GB of game data. The launcher shows the progress.
-4. When installation finishes, press **Start Game**. The game opens fullscreen.
+3. On your first run, press **Install** to download about 4.4 GB of game data packs. The launcher downloads only the packs you need and shows the progress.
+4. When installation finishes, press **Start Game**. Choose exclusive fullscreen, borderless or windowed mode in Settings.
 
-### Requirements for the first release
+### V0.0.2 requirements
 
 | Item | Requirement |
 | --- | --- |
-| Operating system | Windows 10 or 11 (64-bit) |
-| Graphics | NVIDIA GeForce GTX 16 or RTX 20 series or newer with DirectX 12 (Shader Model 6.6) |
-| Driver | Latest NVIDIA graphics driver |
-| Storage | About 4.3 GB, including about 4.2 GB of game data |
-| Internet | Needed to download game data on the first run |
+| Operating system | Windows 10 1709 (build 16299) through Windows 11 (64-bit) |
+| Graphics | Direct3D 12 (feature level 11_0 or higher) or Direct3D 11 (feature level 10_0 or higher); without either, CPU (three.js) rendering |
+| Driver | Latest driver from your graphics card maker |
+| Storage | About 4.5 GB, including about 4.4 GB of game data packs |
+| Internet | Needed to download the game data packs on the first run |
 
 You may need [DirectX 12](https://support.microsoft.com/help/179113), an [NVIDIA graphics driver](https://www.nvidia.com/Download/index.aspx), the [Microsoft Edge WebView2 Runtime](https://developer.microsoft.com/microsoft-edge/webview2/consumer/), and the [Visual C++ Redistributable (x64)](https://aka.ms/vc14/vc_redist.x64.exe). DirectX 12 is included in Windows, and the Visual C++ component is also included in the release archive. Please use the official links for anything you are missing.
 
-### V0.0.2 patch notes draft
+### V0.0.2 patch notes
 
-V0.0.2 includes startup, display and music fixes shaped by first-release tester reports, along with Soul life and outings in town. These changes are connected in the development code and will be verified in play before release.
+V0.0.2 brings the startup, display and music fixes shaped by first-release tester reports and the implementation of the development notices. These changes ship in the V0.0.2 Windows release.
 
 - AMD graphics cards no longer start the NVIDIA calculation path. The cause of the startup crash is still under review. (T-A1)
 - The game can try another way to draw the screen if the first is unavailable. The device that could not open the game still needs checking. (T-B1)
@@ -148,7 +148,7 @@ The [landing page roadmap](https://evt.everlib.pro/?lang=en#roadmap) also lists 
 <a id="zh-cn"></a>
 ## 简体中文
 
-救世主您好，我是 Mephistopheles。V0.0.1 是我们在开发初期如实公开的第一个版本。您可以在大厅与精灵见面，也可以在练习场尝试她们的技能；地图和地下城尚未开放。我们正在根据大家的反馈准备 V0.0.2。
+救世主您好，我是 Mephistopheles。V0.0.1 是我们在开发初期如实公开的第一个版本。您可以在大厅与精灵见面，也可以在练习场尝试她们的技能；地图和地下城尚未开放。我们已根据大家的反馈发布 V0.0.2。
 
 ### 游戏介绍
 
@@ -160,30 +160,30 @@ The [landing page roadmap](https://evt.everlib.pro/?lang=en#roadmap) also lists 
 
 ### V0.0.1 首次公开版本
 
-发布于 2026-09-29。目前可下载的版本是 **V0.0.1**。这个最初版本只能在 Windows 10 或 11（64 位）上运行，需要 DirectX 12 和 NVIDIA 显卡；Linux 与 macOS 暂不支持。
+发布于 2026-09-29，仍可在[发布页面](https://github.com/GarnetRapture/evt_p/releases)下载。这个最初版本只能在 Windows 10 或 11（64 位）上运行，需要 DirectX 12 和 NVIDIA 显卡；Linux 与 macOS 暂不支持。
 
 ### 开始游戏
 
-1. [下载 V0.0.1 压缩包](https://github.com/GarnetRapture/evt_p/releases/download/V0.0.1/Release.zip)并解压。
+1. [下载 V0.0.2 压缩包](https://github.com/GarnetRapture/evt_p/releases/download/V0.0.2/Another-V0.0.2-windows-x64.zip)并解压。
 2. 在解压后的文件夹中运行 `ev_launcher.exe`。
-3. 首次运行时，请点击红色的 **설치（安装）** 按钮，下载约 4.2 GB 的游戏资料。启动器会显示进度。
-4. 安装完成后，点击 **게임 시작（开始游戏）**。游戏将以全屏方式打开。
+3. 首次运行时，请点击 **설치（安装）** 按钮，下载约 4.4 GB 的游戏数据包。启动器只下载需要的包并显示进度。
+4. 安装完成后，点击 **게임 시작（开始游戏）**。可以在设置中选择独占全屏、无边框或窗口模式。
 
-### 首次公开版本所需配置
+### V0.0.2 所需配置
 
 | 项目 | 要求 |
 | --- | --- |
-| 操作系统 | Windows 10 或 11（64 位） |
-| 显卡 | 支持 DirectX 12（着色器模型 6.6）的 NVIDIA GeForce GTX 16 或 RTX 20 系列及更新型号 |
-| 驱动 | 最新的 NVIDIA 显卡驱动 |
-| 存储空间 | 约 4.3 GB，其中游戏资料约 4.2 GB |
-| 网络 | 首次安装时需要下载游戏资料 |
+| 操作系统 | Windows 10 1709（版本号 16299）至 Windows 11（64 位） |
+| 显卡 | 支持 Direct3D 12（功能级别 11_0 以上）或 Direct3D 11（功能级别 10_0 以上）；两者都不可用时使用 CPU（three.js）渲染 |
+| 驱动 | 显卡厂商的最新驱动 |
+| 存储空间 | 约 4.5 GB，其中游戏数据包约 4.4 GB |
+| 网络 | 首次安装时需要下载游戏数据包 |
 
 可能需要 [DirectX 12](https://support.microsoft.com/help/179113)、[NVIDIA 显卡驱动](https://www.nvidia.com/Download/index.aspx)、[Microsoft Edge WebView2 Runtime](https://developer.microsoft.com/microsoft-edge/webview2/consumer/) 和 [Visual C++ 可再发行组件（x64）](https://aka.ms/vc14/vc_redist.x64.exe)。DirectX 12 已包含在 Windows 中，Visual C++ 组件也随发布压缩包提供。缺少哪一项，再从官方页面获取即可。
 
-### V0.0.2 更新说明草案
+### V0.0.2 更新说明
 
-V0.0.2 将包含根据首个公开版本测试反馈完成的启动、画面和音乐修正，以及领地中精灵的生活与出游。以下改动已接入开发代码，发布前会验证实际运行情况。
+V0.0.2 包含根据首个公开版本测试反馈完成的启动、画面和音乐修正，以及开发方向公告的实现。以下改动已包含在 V0.0.2 Windows 版本中。
 
 - AMD 显卡不再启动仅供 NVIDIA 使用的计算路径。启动时崩溃的确切原因仍在调查中。（T-A1）
 - 如果第一种画面方式不可用，游戏可以尝试另一种方式。仍需在无法启动的设备上确认。（T-B1）

@@ -1,4 +1,4 @@
-import { createSignal, onMount } from 'solid-js';
+import { createSignal, onCleanup, onMount } from 'solid-js';
 import lobbyMusicUrl from '@evtp/asset/bgm/BGM_Lobby_02.ogg?url';
 import type { SiteText } from '@evtp/type/site/text/SiteText';
 import { SITE_CLASS_NAME } from '@evtp/constant/ui/class/SITE_CLASS_NAME';
@@ -10,11 +10,27 @@ export function SiteMusicPlayer(props: { text: SiteText }) {
   const [duration, setDuration] = createSignal(0);
   const [unavailable, setUnavailable] = createSignal(false);
   let audio: HTMLAudioElement | undefined;
+  let player: HTMLDivElement | undefined;
 
   onMount(() => {
     if (!audio) return;
-    audio.volume = 0.25;
-    void audio.play().catch(() => setPlaying(false));
+    const element = audio;
+    element.volume = 0.25;
+    const gestures = ['pointerdown', 'keydown'] as const;
+    function release(): void {
+      for (const type of gestures) window.removeEventListener(type, resume, true);
+    }
+    function resume(event: Event): void {
+      release();
+      if (event.target instanceof Node && player?.contains(event.target)) return;
+      if (!element.paused) return;
+      void element.play().then(() => setUnavailable(false)).catch(() => setUnavailable(true));
+    }
+    void element.play().catch(() => {
+      setPlaying(false);
+      for (const type of gestures) window.addEventListener(type, resume, true);
+    });
+    onCleanup(release);
   });
 
   const togglePlayback = async (): Promise<void> => {
@@ -38,7 +54,7 @@ export function SiteMusicPlayer(props: { text: SiteText }) {
   };
 
   return (
-    <div class={SITE_CLASS_NAME.musicPlayer} data-playing={playing()}>
+    <div class={SITE_CLASS_NAME.musicPlayer} data-playing={playing()} ref={(element) => { player = element; }}>
       <audio
         ref={(element) => { audio = element; }}
         src={lobbyMusicUrl}

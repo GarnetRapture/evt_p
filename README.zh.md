@@ -13,7 +13,7 @@
 <a id="zh-cn"></a>
 ## 简体中文
 
-救世主您好，我是 Mephistopheles。V0.0.1 是我们在开发初期如实公开的第一个版本。您可以在大厅与精灵见面，也可以在练习场尝试她们的技能；地图和地下城尚未开放。我们正在根据大家的反馈准备 V0.0.2。
+救世主您好，我是 Mephistopheles。V0.0.1 是我们在开发初期如实公开的第一个版本。您可以在大厅与精灵见面，也可以在练习场尝试她们的技能；地图和地下城尚未开放。我们已根据大家的反馈发布 V0.0.2。
 
 ### 游戏介绍
 
@@ -25,30 +25,30 @@
 
 ### V0.0.1 首次公开版本
 
-发布于 2026-09-29。目前可下载的版本是 **V0.0.1**。这个最初版本只能在 Windows 10 或 11（64 位）上运行，需要 DirectX 12 和 NVIDIA 显卡；Linux 与 macOS 暂不支持。
+发布于 2026-09-29，仍可在[发布页面](https://github.com/GarnetRapture/evt_p/releases)下载。这个最初版本只能在 Windows 10 或 11（64 位）上运行，需要 DirectX 12 和 NVIDIA 显卡；Linux 与 macOS 暂不支持。
 
 ### 开始游戏
 
-1. [下载 V0.0.1 压缩包](https://github.com/GarnetRapture/evt_p/releases/download/V0.0.1/Release.zip)并解压。
+1. [下载 V0.0.2 压缩包](https://github.com/GarnetRapture/evt_p/releases/download/V0.0.2/Another-V0.0.2-windows-x64.zip)并解压。
 2. 在解压后的文件夹中运行 `ev_launcher.exe`。
-3. 首次运行时，请点击红色的 **설치（安装）** 按钮，下载约 4.2 GB 的游戏资料。启动器会显示进度。
-4. 安装完成后，点击 **게임 시작（开始游戏）**。游戏将以全屏方式打开。
+3. 首次运行时，请点击 **설치（安装）** 按钮，下载约 4.4 GB 的游戏数据包。启动器只下载需要的包并显示进度。
+4. 安装完成后，点击 **게임 시작（开始游戏）**。可以在设置中选择独占全屏、无边框或窗口模式。
 
-### 首次公开版本所需配置
+### V0.0.2 所需配置
 
 | 项目 | 要求 |
 | --- | --- |
-| 操作系统 | Windows 10 或 11（64 位） |
-| 显卡 | 支持 DirectX 12（着色器模型 6.6）的 NVIDIA GeForce GTX 16 或 RTX 20 系列及更新型号 |
-| 驱动 | 最新的 NVIDIA 显卡驱动 |
-| 存储空间 | 约 4.3 GB，其中游戏资料约 4.2 GB |
-| 网络 | 首次安装时需要下载游戏资料 |
+| 操作系统 | Windows 10 1709（版本号 16299）至 Windows 11（64 位） |
+| 显卡 | 支持 Direct3D 12（功能级别 11_0 以上）或 Direct3D 11（功能级别 10_0 以上）；两者都不可用时使用 CPU（three.js）渲染 |
+| 驱动 | 显卡厂商的最新驱动 |
+| 存储空间 | 约 4.5 GB，其中游戏数据包约 4.4 GB |
+| 网络 | 首次安装时需要下载游戏数据包 |
 
 可能需要 [DirectX 12](https://support.microsoft.com/help/179113)、[NVIDIA 显卡驱动](https://www.nvidia.com/Download/index.aspx)、[Microsoft Edge WebView2 Runtime](https://developer.microsoft.com/microsoft-edge/webview2/consumer/) 和 [Visual C++ 可再发行组件（x64）](https://aka.ms/vc14/vc_redist.x64.exe)。DirectX 12 已包含在 Windows 中，Visual C++ 组件也随发布压缩包提供。缺少哪一项，再从官方页面获取即可。
 
-### V0.0.2 更新说明草案
+### V0.0.2 更新说明
 
-V0.0.2 将包含根据首个公开版本测试反馈完成的启动、画面和音乐修正，以及领地中精灵的生活与出游。以下改动已接入开发代码，发布前会验证实际运行情况。
+V0.0.2 包含根据首个公开版本测试反馈完成的启动、画面和音乐修正，以及开发方向公告的实现。以下改动已包含在 V0.0.2 Windows 版本中。
 
 - AMD 显卡不再启动仅供 NVIDIA 使用的计算路径。启动时崩溃的确切原因仍在调查中。（T-A1）
 - 如果第一种画面方式不可用，游戏可以尝试另一种方式。仍需在无法启动的设备上确认。（T-B1）

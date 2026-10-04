@@ -13,7 +13,7 @@
 <a id="en"></a>
 ## English
 
-Savior, I am Mephistopheles. V0.0.1 was our first release, shared as it stood in early development. You can meet the Souls in the lobby and try their skills in the practice arena. Maps and dungeons are not open yet. We are preparing V0.0.2 from the reports you sent us.
+Savior, I am Mephistopheles. V0.0.1 was our first release, shared as it stood in early development. You can meet the Souls in the lobby and try their skills in the practice arena. Maps and dungeons are not open yet. V0.0.2 is now released, shaped by the reports you sent us.
 
 ### About the game
 
@@ -25,30 +25,30 @@ On the guide page, the base Mephistopheles model moves between section positions
 
 ### V0.0.1 first release
 
-Released on 2026-09-29. **V0.0.1** is the version available to download. This first release runs on Windows 10 or 11 (64-bit) and requires DirectX 12 and an NVIDIA graphics card. It does not run on Linux or macOS.
+Released on 2026-09-29 and still available on the [releases page](https://github.com/GarnetRapture/evt_p/releases). This first release runs on Windows 10 or 11 (64-bit) and requires DirectX 12 and an NVIDIA graphics card. It does not run on Linux or macOS.
 
 ### Getting started
 
-1. [Download the V0.0.1 archive](https://github.com/GarnetRapture/evt_p/releases/download/V0.0.1/Release.zip) and unzip it.
+1. [Download the V0.0.2 archive](https://github.com/GarnetRapture/evt_p/releases/download/V0.0.2/Another-V0.0.2-windows-x64.zip) and unzip it.
 2. Run `ev_launcher.exe` from the unzipped folder.
-3. On your first run, press the red **Install** button to download about 4.2 GB of game data. The launcher shows the progress.
-4. When installation finishes, press **Start Game**. The game opens fullscreen.
+3. On your first run, press **Install** to download about 4.4 GB of game data packs. The launcher downloads only the packs you need and shows the progress.
+4. When installation finishes, press **Start Game**. Choose exclusive fullscreen, borderless or windowed mode in Settings.
 
-### Requirements for the first release
+### V0.0.2 requirements
 
 | Item | Requirement |
 | --- | --- |
-| Operating system | Windows 10 or 11 (64-bit) |
-| Graphics | NVIDIA GeForce GTX 16 or RTX 20 series or newer with DirectX 12 (Shader Model 6.6) |
-| Driver | Latest NVIDIA graphics driver |
-| Storage | About 4.3 GB, including about 4.2 GB of game data |
-| Internet | Needed to download game data on the first run |
+| Operating system | Windows 10 1709 (build 16299) through Windows 11 (64-bit) |
+| Graphics | Direct3D 12 (feature level 11_0 or higher) or Direct3D 11 (feature level 10_0 or higher); without either, CPU (three.js) rendering |
+| Driver | Latest driver from your graphics card maker |
+| Storage | About 4.5 GB, including about 4.4 GB of game data packs |
+| Internet | Needed to download the game data packs on the first run |
 
 You may need [DirectX 12](https://support.microsoft.com/help/179113), an [NVIDIA graphics driver](https://www.nvidia.com/Download/index.aspx), the [Microsoft Edge WebView2 Runtime](https://developer.microsoft.com/microsoft-edge/webview2/consumer/), and the [Visual C++ Redistributable (x64)](https://aka.ms/vc14/vc_redist.x64.exe). DirectX 12 is included in Windows, and the Visual C++ component is also included in the release archive. Please use the official links for anything you are missing.
 
-### V0.0.2 patch notes draft
+### V0.0.2 patch notes
 
-V0.0.2 includes startup, display and music fixes shaped by first-release tester reports, along with Soul life and outings in town. These changes are connected in the development code and will be verified in play before release.
+V0.0.2 brings the startup, display and music fixes shaped by first-release tester reports and the implementation of the development notices. These changes ship in the V0.0.2 Windows release.
 
 - AMD graphics cards no longer start the NVIDIA calculation path. The cause of the startup crash is still under review. (T-A1)
 - The game can try another way to draw the screen if the first is unavailable. The device that could not open the game still needs checking. (T-B1)
