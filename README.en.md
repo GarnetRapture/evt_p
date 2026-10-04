@@ -48,17 +48,25 @@ You may need [DirectX 12](https://support.microsoft.com/help/179113), an [NVIDIA
 
 ### V0.0.2 patch notes draft
 
-We compared seven reports from other devices with the code. The four changes below are present in the code, but they have not been proven to resolve the reports on those devices.
+V0.0.2 includes startup, display and music fixes shaped by first-release tester reports, along with Soul life and outings in town. These changes are connected in the development code and will be verified in play before release.
 
 - AMD graphics cards no longer start the NVIDIA calculation path. The cause of the startup crash is still under review. (T-A1)
 - The game can try another way to draw the screen if the first is unavailable. The device that could not open the game still needs checking. (T-B1)
 - The monitor's current size is the default, and available sizes are connected to settings. The reported monitor still needs checking. (T-C1)
 - Lobby music stops when you leave, while music for another place plays separately. The actual transition still needs a listening check. (T-C2)
+- Owned Souls wander the town. You can talk to them nearby or choose an outing; your choices are saved to affection and the daily record. (V0.0.2)
+- Windows 10 1709 (build 16299) through Windows 11 is supported, and rendering is chosen per device in the order Direct3D 12 → Direct3D 11 → CPU (three.js). (Notices 01 and 03)
+- Game records are saved in the sqlite3 game database, and game data is split into 19 map packs (.evtm) and 12 data packs (.evtp) so only the needed packs are downloaded. (Notices 04 and 05)
+- The original summon direction of Mephistopheles, Beleth and Lilith, original world and Soul visuals, ultimate and main skill correction, and moving while using skills are implemented. (Notices 06 to 09)
+- Town day and night, sunny, snowy and rainy weather, and town sounds heard with a sense of direction are implemented. (Notice 12)
+- The Linux x86-64 port is in progress (16 of 26 release-lane items written, 61%).
+
+> **DEV notice** · Full combat mechanics, Soul growth and the overall game content are still being designed. Right now our first priority is reproducing the original game’s features as they are.
 
 ### Roadmap and current stages
 
-The [node timeline on the landing page](https://evt.everlib.pro/?lang=en#roadmap) groups all seven reports by their current step: cause under review (T-A1, T-C3, T-C5), device or sound check needed (T-B1, T-C1, T-C2), and feature not connected yet (T-C4). No completion dates have been set. I will not mark them resolved before their causes and device results are checked.
+The [landing page roadmap](https://evt.everlib.pro/?lang=en#roadmap) separates the V0.0.2 verification scope from later development directions. You can also expand the detailed record of first-release reports.
 
-If you find a new problem, [report it on GitHub Issues](https://github.com/GarnetRapture/evt_p/issues).
+After V0.0.2 has been verified and released, please [send us another report on GitHub Issues](https://github.com/GarnetRapture/evt_p/issues) if you find a new problem.
 
-The [landing page roadmap](https://evt.everlib.pro/?lang=en#roadmap) also lists open public GitHub issues. The Pages deployment refreshes that list when an issue is opened, changed, or closed.
+The [landing page roadmap](https://evt.everlib.pro/?lang=en#roadmap) also lists public GitHub issues. The Pages deployment refreshes that list when an issue is opened, changed, or closed.

@@ -57,20 +57,28 @@
 
 ### V0.0.2 패치노트 초안
 
-다른 기기에서 받은 제보 일곱 건을 코드와 대조했습니다. 아래 네 변화는 코드에서 확인했지만, 제보받은 기기에서 해결됐다는 뜻은 아닙니다.
+V0.0.2에는 첫 공개본의 테스터 제보에 따른 실행·화면·음악 수정과 영지의 정령 생활·나들이까지 담습니다. 아래 변경은 개발 코드에 연결되어 있으며, 실제 동작을 출시 전에 검증합니다.
 
 - AMD 그래픽카드에서 NVIDIA 전용 계산을 시작하지 않도록 경로를 분리했습니다. 시작 직후 종료되는 원인은 아직 확인 중입니다. (T-A1)
 - 첫 화면 방식이 맞지 않으면 다른 방식을 살피는 경로를 연결했습니다. 실행 불가 기기에서 확인이 필요합니다. (T-B1)
 - 모니터의 현재 화면 크기를 기본으로 읽고 선택할 수 있는 크기를 설정에 연결했습니다. 제보받은 모니터에서 확인이 필요합니다. (T-C1)
 - 로비를 떠날 때 음악을 멈추고 장소별 음악을 따로 재생하도록 연결했습니다. 실제 전환 소리는 확인이 필요합니다. (T-C2)
+- 영지에서는 보유한 정령이 돌아다니고, 가까이에서 대화하거나 나들이를 선택할 수 있습니다. 장소와 대화 결과는 호감도와 일일 기록에 저장됩니다. (V0.0.2)
+- Windows 10 1709(빌드 16299)부터 Windows 11까지 지원하고, 렌더는 Direct3D 12 → Direct3D 11 → CPU(three.js) 순서로 기기에 맞게 고릅니다. (공지 01·03)
+- 게임 기록을 sqlite3 게임 데이터베이스에 저장하고, 게임 데이터를 맵 팩 19개(.evtm)와 일반 데이터 팩 12개(.evtp)로 나눠 필요한 팩만 받습니다. (공지 04·05)
+- 메피스토펠레스·벨레스·릴리스의 원본 소환 연출, 맵과 정령의 원본 표현, 얼티밋·메인 스킬 교정, 스킬 중 이동을 구현했습니다. (공지 06·07·08·09)
+- 영지의 낮·밤과 맑음·눈·비 날씨, 가까이 가면 방향감 있게 들리는 영지 소리를 구현했습니다. (공지 12)
+- Linux x86-64 이식은 진행 중입니다(출시 레인 26개 항목 중 16개 작성, 61%).
+
+> **DEV 공지** · 본격적인 전투 메커니즘·정령 육성 방향·게임 콘텐츠 전반은 아직 설계를 준비하고 있습니다. 지금은 원본 게임의 기능을 그대로 재현하는 일을 가장 먼저 하고 있습니다.
 
 ### 개발 일정과 진행 단계
 
-[랜딩 페이지의 노드형 개발 일정](https://evt.everlib.pro/#roadmap)은 제보 일곱 건을 원인 확인 중(T-A1·T-C3·T-C5), 실제 기기·소리 확인 대기(T-B1·T-C1·T-C2), 기능 연결 전(T-C4)으로 구분합니다. 확정된 완료 날짜는 없습니다. 원인이나 실제 기기 결과를 확인하기 전에는 해결됐다고 표시하지 않겠습니다.
+[랜딩 페이지의 개발 일정](https://evt.everlib.pro/#roadmap)에서는 V0.0.2의 출시 전 검증 범위와 이후 개발 방향을 구분해 볼 수 있습니다. 첫 공개본의 상세 제보 기록도 펼쳐 볼 수 있습니다.
 
-새로운 문제를 발견하셨다면 [GitHub Issues에서 신고해 주세요](https://github.com/GarnetRapture/evt_p/issues).
+V0.0.2의 동작을 검증해 공개한 뒤에도 새로운 문제를 발견하셨다면 [GitHub Issues에 추가 제보를 남겨 주세요](https://github.com/GarnetRapture/evt_p/issues).
 
-[랜딩 페이지의 개발 일정](https://evt.everlib.pro/#roadmap)에는 GitHub에 공개된 미해결 이슈도 함께 표시됩니다. 이슈가 열리거나 수정·종료되면 페이지 배포 작업이 목록을 새로 반영합니다.
+[랜딩 페이지의 개발 일정](https://evt.everlib.pro/#roadmap)에는 GitHub에 공개된 이슈 목록도 표시됩니다. 이슈가 열리거나 수정·종료되면 페이지 배포 작업이 목록을 새로 반영합니다.
 
 ---
 
@@ -112,20 +120,28 @@ You may need [DirectX 12](https://support.microsoft.com/help/179113), an [NVIDIA
 
 ### V0.0.2 patch notes draft
 
-We compared seven reports from other devices with the code. The four changes below are present in the code, but they have not been proven to resolve the reports on those devices.
+V0.0.2 includes startup, display and music fixes shaped by first-release tester reports, along with Soul life and outings in town. These changes are connected in the development code and will be verified in play before release.
 
 - AMD graphics cards no longer start the NVIDIA calculation path. The cause of the startup crash is still under review. (T-A1)
 - The game can try another way to draw the screen if the first is unavailable. The device that could not open the game still needs checking. (T-B1)
 - The monitor's current size is the default, and available sizes are connected to settings. The reported monitor still needs checking. (T-C1)
 - Lobby music stops when you leave, while music for another place plays separately. The actual transition still needs a listening check. (T-C2)
+- Owned Souls wander the town. You can talk to them nearby or choose an outing; your choices are saved to affection and the daily record. (V0.0.2)
+- Windows 10 1709 (build 16299) through Windows 11 is supported, and rendering is chosen per device in the order Direct3D 12 → Direct3D 11 → CPU (three.js). (Notices 01 and 03)
+- Game records are saved in the sqlite3 game database, and game data is split into 19 map packs (.evtm) and 12 data packs (.evtp) so only the needed packs are downloaded. (Notices 04 and 05)
+- The original summon direction of Mephistopheles, Beleth and Lilith, original world and Soul visuals, ultimate and main skill correction, and moving while using skills are implemented. (Notices 06 to 09)
+- Town day and night, sunny, snowy and rainy weather, and town sounds heard with a sense of direction are implemented. (Notice 12)
+- The Linux x86-64 port is in progress (16 of 26 release-lane items written, 61%).
+
+> **DEV notice** · Full combat mechanics, Soul growth and the overall game content are still being designed. Right now our first priority is reproducing the original game’s features as they are.
 
 ### Roadmap and current stages
 
-The [node timeline on the landing page](https://evt.everlib.pro/?lang=en#roadmap) groups all seven reports by their current step: cause under review (T-A1, T-C3, T-C5), device or sound check needed (T-B1, T-C1, T-C2), and feature not connected yet (T-C4). No completion dates have been set. I will not mark them resolved before their causes and device results are checked.
+The [landing page roadmap](https://evt.everlib.pro/?lang=en#roadmap) separates the V0.0.2 verification scope from later development directions. You can also expand the detailed record of first-release reports.
 
-If you find a new problem, [report it on GitHub Issues](https://github.com/GarnetRapture/evt_p/issues).
+After V0.0.2 has been verified and released, please [send us another report on GitHub Issues](https://github.com/GarnetRapture/evt_p/issues) if you find a new problem.
 
-The [landing page roadmap](https://evt.everlib.pro/?lang=en#roadmap) also lists open public GitHub issues. The Pages deployment refreshes that list when an issue is opened, changed, or closed.
+The [landing page roadmap](https://evt.everlib.pro/?lang=en#roadmap) also lists public GitHub issues. The Pages deployment refreshes that list when an issue is opened, changed, or closed.
 
 ---
 
@@ -167,17 +183,25 @@ The [landing page roadmap](https://evt.everlib.pro/?lang=en#roadmap) also lists 
 
 ### V0.0.2 更新说明草案
 
-我们对照代码查看了来自其他设备的七项反馈。以下四项变化已经体现在代码中，但尚未在反馈设备上证明问题已经解决。
+V0.0.2 将包含根据首个公开版本测试反馈完成的启动、画面和音乐修正，以及领地中精灵的生活与出游。以下改动已接入开发代码，发布前会验证实际运行情况。
 
 - AMD 显卡不再启动仅供 NVIDIA 使用的计算路径。启动时崩溃的确切原因仍在调查中。（T-A1）
 - 如果第一种画面方式不可用，游戏可以尝试另一种方式。仍需在无法启动的设备上确认。（T-B1）
 - 默认使用显示器当前的画面尺寸，并将可用尺寸接入设置。仍需在反馈设备上确认。（T-C1）
 - 离开大厅时会停止大厅音乐，其他场景的音乐由独立路径播放。实际切换效果仍需试听。（T-C2）
+- 已拥有的精灵会在领地中走动。您可以靠近交谈或选择出游；对话选择会保存为好感度与每日记录。（V0.0.2）
+- 支持 Windows 10 1709（版本号 16299）至 Windows 11，渲染会按 Direct3D 12 → Direct3D 11 → CPU（three.js）的顺序根据设备选择。（公告 01、03）
+- 游戏记录保存在 sqlite3 游戏数据库中，游戏数据拆分为 19 个地图包（.evtm）和 12 个数据包（.evtp），只下载需要的包。（公告 04、05）
+- 已实现 Mephistopheles、Beleth、Lilith 的原版召唤演出、地图与精灵的原版表现、终极技与主技能演出校正，以及使用技能时的移动。（公告 06 至 09）
+- 已实现领地的昼夜、晴天·下雪·下雨天气，以及靠近时带方向感的领地声音。（公告 12）
+- Linux x86-64 移植正在进行（发布流程 26 项中已编写 16 项，61%）。
+
+> **DEV 公告** · 正式的战斗机制、精灵养成方向和整体游戏内容仍在设计准备中。目前我们优先如实还原原版游戏的功能。
 
 ### 开发安排与当前阶段
 
-[着陆页的节点时间线](https://evt.everlib.pro/#roadmap)按当前阶段展示全部七项反馈：调查原因中（T-A1、T-C3、T-C5）、等待设备或声音验证（T-B1、T-C1、T-C2）、功能尚未接通（T-C4）。目前没有确定的完成日期。在查明原因并确认设备上的结果前，我不会把它们标记为已解决。
+[着陆页的开发安排](https://evt.everlib.pro/#roadmap)区分 V0.0.2 的发布前验证范围与后续开发方向，也可以展开查看首个公开版本的详细反馈记录。
 
-如果发现新问题，请前往 [GitHub Issues 提交反馈](https://github.com/GarnetRapture/evt_p/issues)。
+V0.0.2 完成验证并发布后，如发现新问题，请在 [GitHub Issues 继续反馈](https://github.com/GarnetRapture/evt_p/issues)。
 
-[着陆页的开发安排](https://evt.everlib.pro/#roadmap)也会列出 GitHub 上公开且尚未关闭的问题。问题新建、更新或关闭后，页面部署流程会刷新列表。
+[着陆页的开发安排](https://evt.everlib.pro/#roadmap)也会列出 GitHub 上公开的问题。问题新建、更新或关闭后，页面部署流程会刷新列表。

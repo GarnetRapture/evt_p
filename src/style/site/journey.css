@@ -8,16 +8,30 @@
 }
 
 .site-journey::-webkit-scrollbar { display: none; }
-.site-journey-track { display: flex; width: max-content; height: 100%; }
-.site-journey-track > section {
-  flex: 0 0 100vw;
-  width: 100vw;
+.site-journey-track { display: flex; height: 100%; }
+.site-journey-track > section,
+.site-journey-track > footer {
+  flex: 0 0 100%;
+  width: 100%;
   height: 100%;
   overflow-x: hidden;
   overflow-y: auto;
   overscroll-behavior-y: contain;
   scroll-snap-align: start;
   scrollbar-gutter: stable;
+}
+
+.site-journey-track > :is(.site-features, .site-updates, .site-roadmap, .site-guide, .site-download, .site-specs) {
+  padding-bottom: calc(var(--site-space-xl) + 3rem);
+}
+
+.site-journey-track > .site-lounge { padding-bottom: calc(clamp(4rem, 8vh, 8rem) + 3rem); }
+
+@media (pointer: coarse) {
+  html { scroll-snap-type: y mandatory; }
+  .site-hero { scroll-snap-align: start; }
+  .site-journey { scroll-snap-align: end; }
+  .site-journey-track > :first-child { overscroll-behavior-y: auto; }
 }
 
 .site-position-bar {
@@ -38,6 +52,8 @@
 .site-position-link[aria-current='location']::after { background: var(--site-warm); box-shadow: 0 0 12px var(--site-warm); }
 .site-position-link:hover,
 .site-position-link:focus-visible { background: rgba(245, 173, 120, 0.18); color: var(--site-white); outline: 1px solid var(--site-warm); }
+.site-position-label { display: none; }
+.site-position-link[aria-current='location'] .site-position-label { display: inline; }
 
 @media (max-width: 1450px) and (min-width: 720px) {
   .site-position-link { min-width: 1.8rem; padding-inline: 0.2rem; }

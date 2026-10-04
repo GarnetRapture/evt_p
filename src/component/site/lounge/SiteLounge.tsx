@@ -3,6 +3,7 @@ import type { SiteSectionProps } from '@evtp/type/component/site/SiteSectionProp
 import { SITE_SECTION_ID } from '@evtp/constant/site/section/SITE_SECTION_ID';
 import { SITE_CLASS_NAME } from '@evtp/constant/ui/class/SITE_CLASS_NAME';
 import galaxySceneUrl from '@evtp/asset/bg/Talk_BG_Galaxy.webp';
+import { SITE_LOUNGE_STACK_ICON } from '@evtp/constant/site/lounge/SITE_LOUNGE_STACK_ICON';
 
 export function SiteLounge(props: SiteSectionProps) {
   return (
@@ -12,6 +13,7 @@ export function SiteLounge(props: SiteSectionProps) {
         <div>
           <p class={SITE_CLASS_NAME.loungeEyebrow}>{props.text.loungeEyebrow}</p>
           <h2 class={SITE_CLASS_NAME.loungeTitle} id="site-lounge-title">{props.text.loungeTitle}</h2>
+          <p class="site-lounge-reason">{props.text.loungeReason}</p>
           <p class={SITE_CLASS_NAME.loungeInvite}>{props.text.loungeInvite}</p>
         </div>
         <div>
@@ -21,7 +23,10 @@ export function SiteLounge(props: SiteSectionProps) {
           </ol>
           <h3>{props.text.loungeStackLabel}</h3>
           <ul class={SITE_CLASS_NAME.loungeStack}>
-            <For each={props.text.loungeStack}>{(item) => <li class={SITE_CLASS_NAME.loungeChip}>{item}</li>}</For>
+            <For each={props.text.loungeStack}>{(item) => <li class={SITE_CLASS_NAME.loungeChip}>
+              {SITE_LOUNGE_STACK_ICON[item] && <img src={SITE_LOUNGE_STACK_ICON[item]} alt="" aria-hidden="true" loading="lazy" />}
+              <span>{item}</span>
+            </li>}</For>
           </ul>
         </div>
       </div>

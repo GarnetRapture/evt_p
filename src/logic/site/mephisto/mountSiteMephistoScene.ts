@@ -112,7 +112,7 @@ export function mountSiteMephistoScene(host: HTMLElement, callbacks: SiteMephist
     const height = host.clientHeight;
     const targetHeight = width < 720
       ? panelOpen ? Math.min(height * 0.4, width * 0.52, 240) : Math.min(height * 0.25, width * 0.32, 160)
-      : panelOpen ? Math.min(height * 0.52, 560) : Math.min(height * 0.34, 360);
+      : panelOpen ? Math.min(height * 0.52, 560) : currentSection === 'download' ? Math.min(height * 0.24, 160) : Math.min(height * 0.34, 360);
     const scale = targetHeight / modelSize.y;
     const targetWidth = modelSize.x * scale;
     const placement = SITE_MEPHISTO_PLACEMENT[currentSection];

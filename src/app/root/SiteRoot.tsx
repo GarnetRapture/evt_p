@@ -5,6 +5,7 @@ import { SiteHero } from '@evtp/component/site/hero/SiteHero';
 import { SiteGuide } from '@evtp/component/site/guide/SiteGuide';
 import { SiteLounge } from '@evtp/component/site/lounge/SiteLounge';
 import { SiteJourney } from '@evtp/component/site/journey/SiteJourney';
+import { SiteFooter } from '@evtp/component/site/footer/SiteFooter';
 import { SiteShell } from '@evtp/component/site/shell/SiteShell';
 import { SiteUpdate } from '@evtp/component/site/update/SiteUpdate';
 import { SiteRoadmap } from '@evtp/component/site/update/SiteRoadmap';
@@ -24,6 +25,7 @@ export function SiteRoot() {
       <SiteDownload localeState={localeState} />
       <SiteSpecs text={localeState.text()} />
       <SiteLounge text={localeState.text()} />
+      <SiteFooter text={localeState.text()} />
       </SiteJourney>
     </SiteShell>
   );

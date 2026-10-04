@@ -12,8 +12,9 @@ export function SitePositionBar(props: { text: SiteText; onNavigate: () => void 
     { id: SITE_SECTION_ID.roadmap, label: props.text.navRoadmap },
     { id: SITE_SECTION_ID.guide, label: props.text.navGuide },
     { id: SITE_SECTION_ID.download, label: props.text.navDownload },
-    { id: SITE_SECTION_ID.specs, label: props.text.specTitle },
+    { id: SITE_SECTION_ID.specs, label: props.text.positionSpecs },
     { id: SITE_SECTION_ID.lounge, label: props.text.loungeTitle },
+    { id: SITE_SECTION_ID.end, label: props.text.positionEnd },
   ];
 
   onMount(() => {

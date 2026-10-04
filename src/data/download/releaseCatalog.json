@@ -1,41 +1,23 @@
 {
-  "version": "V0.0.1",
   "source": {
     "owner": "GarnetRapture",
-    "repo": "evt_p",
-    "asset": "Release.zip"
+    "repo": "evt_p"
   },
   "releases": [
     {
       "version": "V0.0.1",
-      "date": "2026-09-29",
-      "notes": {
-        "ko": [
-          "첫 알파 테스트 빌드입니다.",
-          "런처가 게임 데이터를 확인하고, 없으면 설치 버튼으로 내려받아 설치합니다. 설치 중에는 버튼 게이지와 현황 표시로 진행을 보여 줍니다.",
-          "로비에서 캐릭터를 감상할 수 있습니다.",
-          "연습장에서 정령의 스킬을 확인할 수 있습니다.",
-          "맵과 던전은 아직 작업 중입니다.",
-          "Windows 10·11(64비트)과 NVIDIA 그래픽카드(DirectX 12, CUDA)가 필요합니다. Linux와 macOS는 지원하지 않습니다."
-        ],
-        "en": [
-          "First alpha test build.",
-          "The launcher checks the game data and, if it is missing, downloads and installs it from the Install button. The button gauge and the status panel show the progress.",
-          "Character viewing is available in the lobby.",
-          "Soul skills can be tried out in the practice arena.",
-          "Maps and dungeons are still in progress.",
-          "Requires Windows 10 or 11 (64-bit) and an NVIDIA graphics card (DirectX 12, CUDA). Linux and macOS are not supported."
-        ]
-      },
-      "patch": {
-        "files": 7,
-        "bytes": 24515245
-      },
-      "archive": {
-        "name": "Release.zip",
-        "bytes": 21706751,
-        "sha256": "69d9c47747370cf138ce258630a98661855dc778a1f56e689fe7155f35c2e4f3"
-      }
+      "archives": [
+        {
+          "platform": "windows",
+          "name": "Release.zip",
+          "bytes": 21706751,
+          "sha256": "69d9c47747370cf138ce258630a98661855dc778a1f56e689fe7155f35c2e4f3",
+          "patch": {
+            "files": 7,
+            "bytes": 24515245
+          }
+        }
+      ]
     }
   ]
 }

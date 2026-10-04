@@ -1,0 +1,17 @@
+.site-footer { position: relative; isolation: isolate; display: flex; align-items: center; min-height: 100%; padding: 5rem 0; overflow: hidden; background: #080e1e; }
+.site-footer::before { position: absolute; z-index: 1; inset: 0; background: radial-gradient(circle at 50% 43%, rgba(17, 23, 49, 0.48), rgba(4, 7, 18, 0.9) 78%), linear-gradient(0deg, #080e1e, transparent 45%); content: ''; }
+.site-footer-backdrop { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.66; }
+.site-footer-inner { position: relative; z-index: 2; display: flex; flex-direction: column; align-items: center; gap: 2.2rem; text-align: center; }
+.site-footer-brand { display: flex; flex-direction: column; align-items: center; gap: 1.5rem; width: 100%; }
+.site-footer .site-logo-footer { max-width: 100%; font-size: clamp(3rem, 7vw, 8rem); -webkit-text-stroke: 0; filter: drop-shadow(0 14px 28px rgba(0, 0, 0, 0.65)); }
+.site-footer-bottom { width: auto; margin: 0; padding: 0; border: 0; color: var(--site-warm); font-family: var(--site-font-brand); font-size: 0.9rem; font-weight: 800; letter-spacing: 0.25em; }
+.site-footer-line { max-width: 42rem; margin: 0; color: var(--site-white); font-size: var(--site-step-2); font-weight: 800; line-height: 1.5; text-shadow: 0 3px 10px #050816; }
+.site-footer-nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.5rem 1.2rem; }
+.site-footer-nav-link { color: var(--site-white); font-weight: 700; text-decoration: none; text-shadow: 0 2px 6px #050816; }
+.site-footer-nav-link:hover,
+.site-footer-nav-link:focus-visible { color: var(--site-warm-light); }
+.site-footer-back { display: inline-flex; align-items: center; justify-content: center; min-height: 3rem; margin: 0; padding: 0.6rem 1.4rem; border: 1px solid var(--site-warm); border-radius: 999px; background: rgba(7, 10, 22, 0.75); color: var(--site-warm-light); font-weight: 800; text-decoration: none; }
+.site-footer-back:hover,
+.site-footer-back:focus-visible { background: var(--site-warm); color: var(--site-ink); }
+
+@media (max-width: 700px) { .site-footer .site-logo-footer { flex-direction: column; font-size: clamp(2.6rem, 11vw, 4.2rem); } }

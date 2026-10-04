@@ -20,6 +20,11 @@ export function SiteHero(props: SiteSectionProps) {
           <a class={SITE_CLASS_NAME.buttonPrimary} href={`#${SITE_SECTION_ID.download}`}>{props.text.heroPrimary}</a>
           <a class={SITE_CLASS_NAME.buttonSecondary} href={`#${SITE_SECTION_ID.features}`}>{props.text.heroSecondary}</a>
         </div>
+        <p class={SITE_CLASS_NAME.heroDev}>
+          <span class={SITE_CLASS_NAME.heroDevLabel}>{props.text.devNoticeLabel}</span>
+          <span>{props.text.heroDevNotice}</span>
+          <a href={`#${SITE_SECTION_ID.features}`}>{props.text.heroDevLink}</a>
+        </p>
       </div>
       <a class={SITE_CLASS_NAME.heroScroll} href={`#${SITE_SECTION_ID.features}`}>{props.text.heroScroll}</a>
     </section>

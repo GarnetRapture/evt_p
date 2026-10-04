@@ -34,6 +34,17 @@ export function SiteUpdate(props: SiteSectionProps) {
                 </li>
               )}
             </For>
+            <For each={props.text.updatePatchItems}>
+              {(entry) => (
+                <li class={SITE_CLASS_NAME.updatePatchItem}>
+                  <span class={SITE_CLASS_NAME.updateId}>{entry.id}</span>
+                  <div class={SITE_CLASS_NAME.updatePatchCopy}>
+                    <h4 class={SITE_CLASS_NAME.updateCardTitle}>{entry.title}</h4>
+                    <p class={SITE_CLASS_NAME.updateCardBody}>{entry.body}</p>
+                  </div>
+                </li>
+              )}
+            </For>
           </ul>
         </div>
         <a class={SITE_CLASS_NAME.sectionJump} href={`#${SITE_SECTION_ID.roadmap}`}>{props.text.updateJump}<span aria-hidden="true"> ↗</span></a>

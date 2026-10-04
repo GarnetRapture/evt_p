@@ -15,6 +15,7 @@ const COMPANION_SECTIONS: readonly { id: string; name: SiteMephistoSection }[] =
   { id: SITE_SECTION_ID.download, name: 'download' },
   { id: SITE_SECTION_ID.specs, name: 'specs' },
   { id: SITE_SECTION_ID.lounge, name: 'lounge' },
+  { id: SITE_SECTION_ID.end, name: 'end' },
 ];
 
 export function SiteMephistoCompanion(props: SiteSectionProps) {

@@ -1,7 +1,4 @@
-export interface DownloadReleaseNotes {
-  ko: readonly string[];
-  en: readonly string[];
-}
+import type { PlatformDownloadId } from '@evtp/type/site/download/PlatformDownload';
 
 export interface DownloadReleasePatch {
   files: number;
@@ -9,15 +6,14 @@ export interface DownloadReleasePatch {
 }
 
 export interface DownloadReleaseArchive {
+  platform: PlatformDownloadId;
   name: string;
   bytes: number;
   sha256: string;
+  patch: DownloadReleasePatch;
 }
 
 export interface DownloadRelease {
   version: string;
-  date: string;
-  notes: DownloadReleaseNotes;
-  patch: DownloadReleasePatch;
-  archive: DownloadReleaseArchive;
+  archives: readonly DownloadReleaseArchive[];
 }

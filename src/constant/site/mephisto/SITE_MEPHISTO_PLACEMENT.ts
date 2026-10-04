@@ -6,7 +6,8 @@ export const SITE_MEPHISTO_PLACEMENT: Readonly<Record<SiteMephistoSection, { x: 
   updates: { x: 0.85, y: 0.7 },
   roadmap: { x: 0.9, y: 0.72 },
   guide: { x: 0.82, y: 0.7 },
-  download: { x: 0.16, y: 0.72 },
+  download: { x: 0.96, y: 0.72 },
   specs: { x: 0.8, y: 0.72 },
   lounge: { x: 0.85, y: 0.7 },
+  end: { x: 0.82, y: 0.7 },
 };

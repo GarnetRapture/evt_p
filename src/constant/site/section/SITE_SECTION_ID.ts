@@ -9,4 +9,5 @@ export const SITE_SECTION_ID = {
   download: 'download',
   specs: 'specs',
   lounge: 'lounge',
+  end: 'end',
 } as const;
