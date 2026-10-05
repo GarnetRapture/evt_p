@@ -61,7 +61,7 @@ V0.0.2 brings the startup, display and music fixes shaped by first-release teste
 - Town day and night, sunny, snowy and rainy weather, and town sounds heard with a sense of direction are implemented. (Notice 12)
 - The Linux x86-64 port is in progress (16 of 26 release-lane items written, 61%).
 - Hotfix: older graphics cards without DirectX 12 Ultimate (feature level 12_2), such as the GTX 10 series, now start with Direct3D 11 automatically. The game no longer closes right after starting on older NVIDIA drivers, and choosing Direct3D 11 no longer fails with a screen buffer error.
-- Hotfix: the camera no longer shakes in dungeons, the town and the training ground. It follows the character position instead of body animation, switches combat focus smoothly, and health bars and damage numbers use the same camera as the scene.
+- Hotfix: the camera no longer shakes in dungeons, the town and the training ground. It follows the character position instead of body animation, no longer pulls in and out going down stairs, switches combat focus smoothly, and health bars and damage numbers use the same camera as the scene.
 - Hotfix: launcher setting lists open below the field, show readable text and scroll down to every item.
 
 > **DEV notice** · Full combat mechanics, Soul growth and the overall game content are still being designed. Right now our first priority is reproducing the original game’s features as they are.

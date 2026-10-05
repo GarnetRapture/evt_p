@@ -10,8 +10,8 @@
         {
           "platform": "windows",
           "name": "Another-V0.0.2-windows-x64.zip",
-          "bytes": 23440803,
-          "sha256": "3df0e09afaf125263b08ee6ccb010aafbd18ed40bba16f579d0908f0434566f6",
+          "bytes": 23440939,
+          "sha256": "a851b36aca257c7791d3df2da87e4a39aa47d11bb9cc2516a6d811cb67e62b48",
           "patch": {
             "files": 8,
             "bytes": 27789858
