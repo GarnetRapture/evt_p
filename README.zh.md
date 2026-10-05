@@ -29,8 +29,8 @@
 
 ### 开始游戏
 
-1. [下载 V0.0.2 压缩包](https://github.com/GarnetRapture/evt_p/releases/download/V0.0.2/Another-V0.0.2-windows-x64.zip)并解压。
-2. 在解压后的文件夹中运行 `ev_launcher.exe`。
+1. 下载 V0.0.2 压缩包（[Windows](https://github.com/GarnetRapture/evt_p/releases/download/V0.0.2/Another-V0.0.2-windows-x64.zip) · [Linux](https://github.com/GarnetRapture/evt_p/releases/download/V0.0.2/Another-V0.0.2-linux-x64.tar.gz)）并解压。
+2. 在解压后的文件夹中运行启动器：Windows 为 `ev_launcher.exe`，Linux 为 `./ev_launcher`。Linux 需要 `libSDL3.so.0` 和 `libcurl.so.4`，在 Ubuntu 26.04 上可用 `sudo apt install libsdl3-0 libcurl4t64` 安装。
 3. 首次运行时，请点击 **설치（安装）** 按钮，下载约 4.4 GB 的游戏数据包。启动器只下载需要的包并显示进度。
 4. 安装完成后，点击 **게임 시작（开始游戏）**。可以在设置中选择独占全屏、无边框或窗口模式。
 
@@ -38,17 +38,17 @@
 
 | 项目 | 要求 |
 | --- | --- |
-| 操作系统 | Windows 10 1709（版本号 16299）至 Windows 11（64 位） |
-| 显卡 | 支持 Direct3D 12（功能级别 11_0 以上）或 Direct3D 11（功能级别 10_0 以上）；两者都不可用时使用 CPU（three.js）渲染 |
+| 操作系统 | Windows 10 1709（版本号 16299）至 Windows 11（64 位），以及 Linux x86-64（glibc 2.43 以上与 GCC 15 的 libstdc++，例如 Ubuntu 26.04） |
+| 显卡 | Windows：支持 Direct3D 12（功能级别 11_0 以上）或 Direct3D 11（功能级别 10_0 以上）；两者都不可用时使用 CPU（three.js）渲染。Linux：使用 CPU（three.js）渲染 |
 | 驱动 | 显卡厂商的最新驱动 |
-| 存储空间 | 约 4.5 GB，其中游戏数据包约 4.4 GB |
+| 存储空间 | Windows 约 4.5 GB，Linux 约 4.8 GB，其中游戏数据包约 4.4 GB |
 | 网络 | 首次安装时需要下载游戏数据包 |
 
-可能需要 [DirectX 12](https://support.microsoft.com/help/179113)、[NVIDIA 显卡驱动](https://www.nvidia.com/Download/index.aspx)、[Microsoft Edge WebView2 Runtime](https://developer.microsoft.com/microsoft-edge/webview2/consumer/) 和 [Visual C++ 可再发行组件（x64）](https://aka.ms/vc14/vc_redist.x64.exe)。DirectX 12 已包含在 Windows 中，Visual C++ 组件也随发布压缩包提供。缺少哪一项，再从官方页面获取即可。
+可能需要 [DirectX 12](https://support.microsoft.com/help/179113)、[NVIDIA 显卡驱动](https://www.nvidia.com/Download/index.aspx)、[Microsoft Edge WebView2 Runtime](https://developer.microsoft.com/microsoft-edge/webview2/consumer/) 和 [Visual C++ 可再发行组件（x64）](https://aka.ms/vc14/vc_redist.x64.exe)。DirectX 12 已包含在 Windows 中，Visual C++ 组件也随发布压缩包提供。缺少哪一项，再从官方页面获取即可。Linux 压缩包已包含 CEF，并需要系统库 `libSDL3.so.0` 和 `libcurl.so.4`。
 
 ### V0.0.2 更新说明
 
-V0.0.2 包含根据首个公开版本测试反馈完成的启动、画面和音乐修正，以及开发方向公告的实现。以下改动已包含在 V0.0.2 Windows 版本中。
+V0.0.2 包含根据首个公开版本测试反馈完成的启动、画面和音乐修正，以及开发方向公告的实现。以下改动已包含在 V0.0.2 Windows 与 Linux 版本中。
 
 - AMD 显卡不再启动仅供 NVIDIA 使用的计算路径。启动时崩溃的确切原因仍在调查中。（T-A1）
 - 如果第一种画面方式不可用，游戏可以尝试另一种方式。仍需在无法启动的设备上确认。（T-B1）
@@ -59,7 +59,7 @@ V0.0.2 包含根据首个公开版本测试反馈完成的启动、画面和音�
 - 游戏记录保存在 sqlite3 游戏数据库中，游戏数据拆分为 19 个地图包（.evtm）和 12 个数据包（.evtp），只下载需要的包。（公告 04、05）
 - 已实现 Mephistopheles、Beleth、Lilith 的原版召唤演出、地图与精灵的原版表现、终极技与主技能演出校正，以及使用技能时的移动。（公告 06 至 09）
 - 已实现领地的昼夜、晴天·下雪·下雨天气，以及靠近时带方向感的领地声音。（公告 12）
-- Linux x86-64 移植正在进行（发布流程 26 项中已编写 16 项，61%）。
+- 同时发布 Linux x86-64 版本。启动器和游戏画面由 CEF 承载，并以 CPU（three.js）渲染显示场景；启动器和游戏窗口图标与 Windows 相同。Linux 版 Vulkan、OpenGL 渲染尚未实现。
 - 热修复：GTX 10 系列等不支持 DirectX 12 Ultimate（功能级别 12_2）的旧款显卡会自动使用 Direct3D 11 运行。修复了在旧版 NVIDIA 驱动上启动后立即退出的问题，以及选择 Direct3D 11 时因画面缓冲区错误无法启动的问题。
 - 热修复：修复了地下城、领地和训练场中镜头晃动的问题。镜头改为跟随角色位置而不是身体动画，下楼梯时镜头不再反复拉近拉远，战斗目标切换更平滑，血条和伤害数字与场景使用同一镜头显示。
 - 热修复：启动器设置中的选择列表会在字段下方展开，文字清晰可见，并可滚动到所有选项。

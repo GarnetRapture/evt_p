@@ -29,8 +29,8 @@ Released on 2026-09-29 and still available on the [releases page](https://github
 
 ### Getting started
 
-1. [Download the V0.0.2 archive](https://github.com/GarnetRapture/evt_p/releases/download/V0.0.2/Another-V0.0.2-windows-x64.zip) and unzip it.
-2. Run `ev_launcher.exe` from the unzipped folder.
+1. Download the V0.0.2 archive ([Windows](https://github.com/GarnetRapture/evt_p/releases/download/V0.0.2/Another-V0.0.2-windows-x64.zip) · [Linux](https://github.com/GarnetRapture/evt_p/releases/download/V0.0.2/Another-V0.0.2-linux-x64.tar.gz)) and unpack it.
+2. Run the launcher from the unpacked folder: `ev_launcher.exe` on Windows, `./ev_launcher` on Linux. Linux needs `libSDL3.so.0` and `libcurl.so.4`; on Ubuntu 26.04 you can get them with `sudo apt install libsdl3-0 libcurl4t64`.
 3. On your first run, press **Install** to download about 4.4 GB of game data packs. The launcher downloads only the packs you need and shows the progress.
 4. When installation finishes, press **Start Game**. Choose exclusive fullscreen, borderless or windowed mode in Settings.
 
@@ -38,17 +38,17 @@ Released on 2026-09-29 and still available on the [releases page](https://github
 
 | Item | Requirement |
 | --- | --- |
-| Operating system | Windows 10 1709 (build 16299) through Windows 11 (64-bit) |
-| Graphics | Direct3D 12 (feature level 11_0 or higher) or Direct3D 11 (feature level 10_0 or higher); without either, CPU (three.js) rendering |
+| Operating system | Windows 10 1709 (build 16299) through Windows 11 (64-bit), and Linux x86-64 (glibc 2.43 or later with the GCC 15 libstdc++, for example Ubuntu 26.04) |
+| Graphics | Windows: Direct3D 12 (feature level 11_0 or higher) or Direct3D 11 (feature level 10_0 or higher); without either, CPU (three.js) rendering. Linux: CPU (three.js) rendering |
 | Driver | Latest driver from your graphics card maker |
-| Storage | About 4.5 GB, including about 4.4 GB of game data packs |
+| Storage | About 4.5 GB on Windows and 4.8 GB on Linux, including about 4.4 GB of game data packs |
 | Internet | Needed to download the game data packs on the first run |
 
-You may need [DirectX 12](https://support.microsoft.com/help/179113), an [NVIDIA graphics driver](https://www.nvidia.com/Download/index.aspx), the [Microsoft Edge WebView2 Runtime](https://developer.microsoft.com/microsoft-edge/webview2/consumer/), and the [Visual C++ Redistributable (x64)](https://aka.ms/vc14/vc_redist.x64.exe). DirectX 12 is included in Windows, and the Visual C++ component is also included in the release archive. Please use the official links for anything you are missing.
+You may need [DirectX 12](https://support.microsoft.com/help/179113), an [NVIDIA graphics driver](https://www.nvidia.com/Download/index.aspx), the [Microsoft Edge WebView2 Runtime](https://developer.microsoft.com/microsoft-edge/webview2/consumer/), and the [Visual C++ Redistributable (x64)](https://aka.ms/vc14/vc_redist.x64.exe). DirectX 12 is included in Windows, and the Visual C++ component is also included in the release archive. Please use the official links for anything you are missing. The Linux archive includes CEF and needs the system libraries `libSDL3.so.0` and `libcurl.so.4`.
 
 ### V0.0.2 patch notes
 
-V0.0.2 brings the startup, display and music fixes shaped by first-release tester reports and the implementation of the development notices. These changes ship in the V0.0.2 Windows release.
+V0.0.2 brings the startup, display and music fixes shaped by first-release tester reports and the implementation of the development notices. These changes ship in the V0.0.2 Windows and Linux releases.
 
 - AMD graphics cards no longer start the NVIDIA calculation path. The cause of the startup crash is still under review. (T-A1)
 - The game can try another way to draw the screen if the first is unavailable. The device that could not open the game still needs checking. (T-B1)
@@ -59,7 +59,7 @@ V0.0.2 brings the startup, display and music fixes shaped by first-release teste
 - Game records are saved in the sqlite3 game database, and game data is split into 19 map packs (.evtm) and 12 data packs (.evtp) so only the needed packs are downloaded. (Notices 04 and 05)
 - The original summon direction of Mephistopheles, Beleth and Lilith, original world and Soul visuals, ultimate and main skill correction, and moving while using skills are implemented. (Notices 06 to 09)
 - Town day and night, sunny, snowy and rainy weather, and town sounds heard with a sense of direction are implemented. (Notice 12)
-- The Linux x86-64 port is in progress (16 of 26 release-lane items written, 61%).
+- The Linux x86-64 version is released alongside. The launcher and game screens are hosted by CEF and rendered with CPU (three.js) rendering, and the launcher and game windows use the same icon as on Windows. Vulkan and OpenGL rendering for Linux are not implemented yet.
 - Hotfix: older graphics cards without DirectX 12 Ultimate (feature level 12_2), such as the GTX 10 series, now start with Direct3D 11 automatically. The game no longer closes right after starting on older NVIDIA drivers, and choosing Direct3D 11 no longer fails with a screen buffer error.
 - Hotfix: the camera no longer shakes in dungeons, the town and the training ground. It follows the character position instead of body animation, no longer pulls in and out going down stairs, switches combat focus smoothly, and health bars and damage numbers use the same camera as the scene.
 - Hotfix: launcher setting lists open below the field, show readable text and scroll down to every item.

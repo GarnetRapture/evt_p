@@ -16,6 +16,16 @@
             "files": 8,
             "bytes": 27789858
           }
+        },
+        {
+          "platform": "linux",
+          "name": "Another-V0.0.2-linux-x64.tar.gz",
+          "bytes": 166099388,
+          "sha256": "1986e667f4b243bcfaa60d2446e558e783adee3f710e201d64db7e2885fe0d5e",
+          "patch": {
+            "files": 5,
+            "bytes": 7118318
+          }
         }
       ]
     },

@@ -10,7 +10,7 @@
 [![platform](https://img.shields.io/badge/platform-Windows%2010%20%7C%2011-0078D4?style=flat-square)](#ko-requirements)
 [![page](https://img.shields.io/badge/page-evt.everlib.pro-47bfff?style=flat-square)](https://evt.everlib.pro)
 
-**[안내 페이지](https://evt.everlib.pro)** · **[V0.0.2 내려받기](https://github.com/GarnetRapture/evt_p/releases/download/V0.0.2/Another-V0.0.2-windows-x64.zip)**
+**[안내 페이지](https://evt.everlib.pro)** · **[V0.0.2 내려받기(Windows)](https://github.com/GarnetRapture/evt_p/releases/download/V0.0.2/Another-V0.0.2-windows-x64.zip)** · **[V0.0.2 내려받기(Linux)](https://github.com/GarnetRapture/evt_p/releases/download/V0.0.2/Another-V0.0.2-linux-x64.tar.gz)**
 
 [한국어](#ko) · [English](README.en.md) · [简体中文](README.zh.md)
 
@@ -37,8 +37,8 @@
 
 ### 시작 안내
 
-1. [V0.0.2 압축 파일](https://github.com/GarnetRapture/evt_p/releases/download/V0.0.2/Another-V0.0.2-windows-x64.zip)을 받아 압축을 풀어 주세요.
-2. 폴더 안의 `ev_launcher.exe`를 실행해 주세요.
+1. V0.0.2 압축 파일([Windows](https://github.com/GarnetRapture/evt_p/releases/download/V0.0.2/Another-V0.0.2-windows-x64.zip) · [Linux](https://github.com/GarnetRapture/evt_p/releases/download/V0.0.2/Another-V0.0.2-linux-x64.tar.gz))을 받아 압축을 풀어 주세요.
+2. 폴더 안의 런처를 실행해 주세요. Windows는 `ev_launcher.exe`, Linux는 `./ev_launcher`입니다. Linux에서는 `libSDL3.so.0`과 `libcurl.so.4`가 필요하며, Ubuntu 26.04라면 `sudo apt install libsdl3-0 libcurl4t64`로 준비할 수 있습니다.
 3. 처음에는 **설치** 버튼을 눌러 게임 데이터 팩(약 4.4 GB)을 받아 주세요. 런처가 필요한 팩만 받으며 진행 상황을 보여 줍니다.
 4. 설치가 끝나면 **게임 시작**을 눌러 주세요. 화면 모드(전용 전체화면·테두리 없음·창 모드)는 환경설정에서 고를 수 있습니다.
 
@@ -47,17 +47,17 @@
 
 | 항목 | 내용 |
 | --- | --- |
-| 운영체제 | Windows 10 1709(빌드 16299)부터 Windows 11까지 (64비트) |
-| 그래픽 | Direct3D 12(기능 수준 11_0 이상) 또는 Direct3D 11(기능 수준 10_0 이상). 둘 다 쓸 수 없으면 CPU(three.js) 렌더로 실행 |
+| 운영체제 | Windows 10 1709(빌드 16299)부터 Windows 11까지 (64비트), Linux x86-64(glibc 2.43 이상과 GCC 15의 libstdc++, 예: Ubuntu 26.04) |
+| 그래픽 | Windows: Direct3D 12(기능 수준 11_0 이상) 또는 Direct3D 11(기능 수준 10_0 이상). 둘 다 쓸 수 없으면 CPU(three.js) 렌더로 실행. Linux: CPU(three.js) 렌더로 실행 |
 | 드라이버 | 그래픽카드 제조사의 최신 드라이버 |
-| 저장 공간 | 약 4.5 GB (게임 데이터 팩 약 4.4 GB 포함) |
+| 저장 공간 | Windows 약 4.5 GB, Linux 약 4.8 GB (게임 데이터 팩 약 4.4 GB 포함) |
 | 인터넷 | 처음 설치할 때 게임 데이터 팩을 받는 데 필요 |
 
-필요한 구성 요소는 [DirectX 12](https://support.microsoft.com/help/179113), [NVIDIA 그래픽 드라이버](https://www.nvidia.com/Download/index.aspx), [Microsoft Edge WebView2 런타임](https://developer.microsoft.com/microsoft-edge/webview2/consumer/), [Visual C++ 재배포 패키지 (x64)](https://aka.ms/vc14/vc_redist.x64.exe)입니다. DirectX 12는 Windows에 포함되며, Visual C++ 구성 요소는 배포 파일에도 들어 있습니다. 없는 항목만 공식 안내에서 받아 주세요.
+필요한 구성 요소는 [DirectX 12](https://support.microsoft.com/help/179113), [NVIDIA 그래픽 드라이버](https://www.nvidia.com/Download/index.aspx), [Microsoft Edge WebView2 런타임](https://developer.microsoft.com/microsoft-edge/webview2/consumer/), [Visual C++ 재배포 패키지 (x64)](https://aka.ms/vc14/vc_redist.x64.exe)입니다. DirectX 12는 Windows에 포함되며, Visual C++ 구성 요소는 배포 파일에도 들어 있습니다. 없는 항목만 공식 안내에서 받아 주세요. Linux 배포 파일에는 CEF가 들어 있으며, 시스템 라이브러리 `libSDL3.so.0`과 `libcurl.so.4`가 있어야 합니다.
 
 ### V0.0.2 패치노트
 
-V0.0.2에는 첫 공개본의 테스터 제보에 따른 실행·화면·음악 수정과 일반 사용자 개발 방향 공지의 구현이 담겼습니다. 아래 변경은 V0.0.2 Windows 배포본에 들어 있습니다.
+V0.0.2에는 첫 공개본의 테스터 제보에 따른 실행·화면·음악 수정과 일반 사용자 개발 방향 공지의 구현이 담겼습니다. 아래 변경은 V0.0.2 Windows·Linux 배포본에 들어 있습니다.
 
 - AMD 그래픽카드에서 NVIDIA 전용 계산을 시작하지 않도록 경로를 분리했습니다. 시작 직후 종료되는 원인은 아직 확인 중입니다. (T-A1)
 - 첫 화면 방식이 맞지 않으면 다른 방식을 살피는 경로를 연결했습니다. 실행 불가 기기에서 확인이 필요합니다. (T-B1)
@@ -68,7 +68,7 @@ V0.0.2에는 첫 공개본의 테스터 제보에 따른 실행·화면·음악 
 - 게임 기록을 sqlite3 게임 데이터베이스에 저장하고, 게임 데이터를 맵 팩 19개(.evtm)와 일반 데이터 팩 12개(.evtp)로 나눠 필요한 팩만 받습니다. (공지 04·05)
 - 메피스토펠레스·벨레스·릴리스의 원본 소환 연출, 맵과 정령의 원본 표현, 얼티밋·메인 스킬 교정, 스킬 중 이동을 구현했습니다. (공지 06·07·08·09)
 - 영지의 낮·밤과 맑음·눈·비 날씨, 가까이 가면 방향감 있게 들리는 영지 소리를 구현했습니다. (공지 12)
-- Linux x86-64 이식은 진행 중입니다(출시 레인 26개 항목 중 16개 작성, 61%).
+- Linux x86-64 버전도 함께 공개했습니다. 런처와 게임 화면은 CEF로 띄우고 CPU(three.js) 렌더로 장면을 보여 주며, 런처와 게임 창 아이콘도 Windows와 같습니다. Linux용 Vulkan·OpenGL 렌더는 아직 구현하지 않았습니다.
 - 핫픽스: GTX 10 계열처럼 DirectX 12 Ultimate(기능 수준 12_2)를 지원하지 않는 구세대 그래픽카드는 자동으로 Direct3D 11로 실행합니다. 구형 NVIDIA 드라이버에서 시작 직후 꺼지던 문제와, Direct3D 11을 고르면 화면 버퍼 오류로 시작하지 못하던 문제를 고쳤습니다.
 - 핫픽스: 던전·영지·훈련장의 카메라 흔들림을 고쳤습니다. 카메라가 몸 동작 대신 캐릭터 위치를 따라가고, 계단을 내려갈 때 카메라가 당겨졌다 풀리지 않으며, 전투 대상 전환이 부드러워졌고, 체력바와 피해 숫자가 장면과 같은 카메라로 표시됩니다.
 - 핫픽스: 런처 설정의 선택 목록이 필드 아래로 펼쳐지고, 글자가 잘 보이며 아래 항목까지 스크롤할 수 있습니다.
@@ -104,8 +104,8 @@ Released on 2026-09-29 and still available on the [releases page](https://github
 
 ### Getting started
 
-1. [Download the V0.0.2 archive](https://github.com/GarnetRapture/evt_p/releases/download/V0.0.2/Another-V0.0.2-windows-x64.zip) and unzip it.
-2. Run `ev_launcher.exe` from the unzipped folder.
+1. Download the V0.0.2 archive ([Windows](https://github.com/GarnetRapture/evt_p/releases/download/V0.0.2/Another-V0.0.2-windows-x64.zip) · [Linux](https://github.com/GarnetRapture/evt_p/releases/download/V0.0.2/Another-V0.0.2-linux-x64.tar.gz)) and unpack it.
+2. Run the launcher from the unpacked folder: `ev_launcher.exe` on Windows, `./ev_launcher` on Linux. Linux needs `libSDL3.so.0` and `libcurl.so.4`; on Ubuntu 26.04 you can get them with `sudo apt install libsdl3-0 libcurl4t64`.
 3. On your first run, press **Install** to download about 4.4 GB of game data packs. The launcher downloads only the packs you need and shows the progress.
 4. When installation finishes, press **Start Game**. Choose exclusive fullscreen, borderless or windowed mode in Settings.
 
@@ -113,17 +113,17 @@ Released on 2026-09-29 and still available on the [releases page](https://github
 
 | Item | Requirement |
 | --- | --- |
-| Operating system | Windows 10 1709 (build 16299) through Windows 11 (64-bit) |
-| Graphics | Direct3D 12 (feature level 11_0 or higher) or Direct3D 11 (feature level 10_0 or higher); without either, CPU (three.js) rendering |
+| Operating system | Windows 10 1709 (build 16299) through Windows 11 (64-bit), and Linux x86-64 (glibc 2.43 or later with the GCC 15 libstdc++, for example Ubuntu 26.04) |
+| Graphics | Windows: Direct3D 12 (feature level 11_0 or higher) or Direct3D 11 (feature level 10_0 or higher); without either, CPU (three.js) rendering. Linux: CPU (three.js) rendering |
 | Driver | Latest driver from your graphics card maker |
-| Storage | About 4.5 GB, including about 4.4 GB of game data packs |
+| Storage | About 4.5 GB on Windows and 4.8 GB on Linux, including about 4.4 GB of game data packs |
 | Internet | Needed to download the game data packs on the first run |
 
-You may need [DirectX 12](https://support.microsoft.com/help/179113), an [NVIDIA graphics driver](https://www.nvidia.com/Download/index.aspx), the [Microsoft Edge WebView2 Runtime](https://developer.microsoft.com/microsoft-edge/webview2/consumer/), and the [Visual C++ Redistributable (x64)](https://aka.ms/vc14/vc_redist.x64.exe). DirectX 12 is included in Windows, and the Visual C++ component is also included in the release archive. Please use the official links for anything you are missing.
+You may need [DirectX 12](https://support.microsoft.com/help/179113), an [NVIDIA graphics driver](https://www.nvidia.com/Download/index.aspx), the [Microsoft Edge WebView2 Runtime](https://developer.microsoft.com/microsoft-edge/webview2/consumer/), and the [Visual C++ Redistributable (x64)](https://aka.ms/vc14/vc_redist.x64.exe). DirectX 12 is included in Windows, and the Visual C++ component is also included in the release archive. Please use the official links for anything you are missing. The Linux archive includes CEF and needs the system libraries `libSDL3.so.0` and `libcurl.so.4`.
 
 ### V0.0.2 patch notes
 
-V0.0.2 brings the startup, display and music fixes shaped by first-release tester reports and the implementation of the development notices. These changes ship in the V0.0.2 Windows release.
+V0.0.2 brings the startup, display and music fixes shaped by first-release tester reports and the implementation of the development notices. These changes ship in the V0.0.2 Windows and Linux releases.
 
 - AMD graphics cards no longer start the NVIDIA calculation path. The cause of the startup crash is still under review. (T-A1)
 - The game can try another way to draw the screen if the first is unavailable. The device that could not open the game still needs checking. (T-B1)
@@ -134,7 +134,7 @@ V0.0.2 brings the startup, display and music fixes shaped by first-release teste
 - Game records are saved in the sqlite3 game database, and game data is split into 19 map packs (.evtm) and 12 data packs (.evtp) so only the needed packs are downloaded. (Notices 04 and 05)
 - The original summon direction of Mephistopheles, Beleth and Lilith, original world and Soul visuals, ultimate and main skill correction, and moving while using skills are implemented. (Notices 06 to 09)
 - Town day and night, sunny, snowy and rainy weather, and town sounds heard with a sense of direction are implemented. (Notice 12)
-- The Linux x86-64 port is in progress (16 of 26 release-lane items written, 61%).
+- The Linux x86-64 version is released alongside. The launcher and game screens are hosted by CEF and rendered with CPU (three.js) rendering, and the launcher and game windows use the same icon as on Windows. Vulkan and OpenGL rendering for Linux are not implemented yet.
 
 > **DEV notice** · Full combat mechanics, Soul growth and the overall game content are still being designed. Right now our first priority is reproducing the original game’s features as they are.
 
@@ -167,8 +167,8 @@ The [landing page roadmap](https://evt.everlib.pro/?lang=en#roadmap) also lists 
 
 ### 开始游戏
 
-1. [下载 V0.0.2 压缩包](https://github.com/GarnetRapture/evt_p/releases/download/V0.0.2/Another-V0.0.2-windows-x64.zip)并解压。
-2. 在解压后的文件夹中运行 `ev_launcher.exe`。
+1. 下载 V0.0.2 压缩包（[Windows](https://github.com/GarnetRapture/evt_p/releases/download/V0.0.2/Another-V0.0.2-windows-x64.zip) · [Linux](https://github.com/GarnetRapture/evt_p/releases/download/V0.0.2/Another-V0.0.2-linux-x64.tar.gz)）并解压。
+2. 在解压后的文件夹中运行启动器：Windows 为 `ev_launcher.exe`，Linux 为 `./ev_launcher`。Linux 需要 `libSDL3.so.0` 和 `libcurl.so.4`，在 Ubuntu 26.04 上可用 `sudo apt install libsdl3-0 libcurl4t64` 安装。
 3. 首次运行时，请点击 **설치（安装）** 按钮，下载约 4.4 GB 的游戏数据包。启动器只下载需要的包并显示进度。
 4. 安装完成后，点击 **게임 시작（开始游戏）**。可以在设置中选择独占全屏、无边框或窗口模式。
 
@@ -176,17 +176,17 @@ The [landing page roadmap](https://evt.everlib.pro/?lang=en#roadmap) also lists 
 
 | 项目 | 要求 |
 | --- | --- |
-| 操作系统 | Windows 10 1709（版本号 16299）至 Windows 11（64 位） |
-| 显卡 | 支持 Direct3D 12（功能级别 11_0 以上）或 Direct3D 11（功能级别 10_0 以上）；两者都不可用时使用 CPU（three.js）渲染 |
+| 操作系统 | Windows 10 1709（版本号 16299）至 Windows 11（64 位），以及 Linux x86-64（glibc 2.43 以上与 GCC 15 的 libstdc++，例如 Ubuntu 26.04） |
+| 显卡 | Windows：支持 Direct3D 12（功能级别 11_0 以上）或 Direct3D 11（功能级别 10_0 以上）；两者都不可用时使用 CPU（three.js）渲染。Linux：使用 CPU（three.js）渲染 |
 | 驱动 | 显卡厂商的最新驱动 |
-| 存储空间 | 约 4.5 GB，其中游戏数据包约 4.4 GB |
+| 存储空间 | Windows 约 4.5 GB，Linux 约 4.8 GB，其中游戏数据包约 4.4 GB |
 | 网络 | 首次安装时需要下载游戏数据包 |
 
-可能需要 [DirectX 12](https://support.microsoft.com/help/179113)、[NVIDIA 显卡驱动](https://www.nvidia.com/Download/index.aspx)、[Microsoft Edge WebView2 Runtime](https://developer.microsoft.com/microsoft-edge/webview2/consumer/) 和 [Visual C++ 可再发行组件（x64）](https://aka.ms/vc14/vc_redist.x64.exe)。DirectX 12 已包含在 Windows 中，Visual C++ 组件也随发布压缩包提供。缺少哪一项，再从官方页面获取即可。
+可能需要 [DirectX 12](https://support.microsoft.com/help/179113)、[NVIDIA 显卡驱动](https://www.nvidia.com/Download/index.aspx)、[Microsoft Edge WebView2 Runtime](https://developer.microsoft.com/microsoft-edge/webview2/consumer/) 和 [Visual C++ 可再发行组件（x64）](https://aka.ms/vc14/vc_redist.x64.exe)。DirectX 12 已包含在 Windows 中，Visual C++ 组件也随发布压缩包提供。缺少哪一项，再从官方页面获取即可。Linux 压缩包已包含 CEF，并需要系统库 `libSDL3.so.0` 和 `libcurl.so.4`。
 
 ### V0.0.2 更新说明
 
-V0.0.2 包含根据首个公开版本测试反馈完成的启动、画面和音乐修正，以及开发方向公告的实现。以下改动已包含在 V0.0.2 Windows 版本中。
+V0.0.2 包含根据首个公开版本测试反馈完成的启动、画面和音乐修正，以及开发方向公告的实现。以下改动已包含在 V0.0.2 Windows 与 Linux 版本中。
 
 - AMD 显卡不再启动仅供 NVIDIA 使用的计算路径。启动时崩溃的确切原因仍在调查中。（T-A1）
 - 如果第一种画面方式不可用，游戏可以尝试另一种方式。仍需在无法启动的设备上确认。（T-B1）
@@ -197,7 +197,7 @@ V0.0.2 包含根据首个公开版本测试反馈完成的启动、画面和音�
 - 游戏记录保存在 sqlite3 游戏数据库中，游戏数据拆分为 19 个地图包（.evtm）和 12 个数据包（.evtp），只下载需要的包。（公告 04、05）
 - 已实现 Mephistopheles、Beleth、Lilith 的原版召唤演出、地图与精灵的原版表现、终极技与主技能演出校正，以及使用技能时的移动。（公告 06 至 09）
 - 已实现领地的昼夜、晴天·下雪·下雨天气，以及靠近时带方向感的领地声音。（公告 12）
-- Linux x86-64 移植正在进行（发布流程 26 项中已编写 16 项，61%）。
+- 同时发布 Linux x86-64 版本。启动器和游戏画面由 CEF 承载，并以 CPU（three.js）渲染显示场景；启动器和游戏窗口图标与 Windows 相同。Linux 版 Vulkan、OpenGL 渲染尚未实现。
 
 > **DEV 公告** · 正式的战斗机制、精灵养成方向和整体游戏内容仍在设计准备中。目前我们优先如实还原原版游戏的功能。
 

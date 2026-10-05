@@ -2,7 +2,7 @@
   "V0.0.2": {
     "date": "2026-10-05",
     "ko": [
-      "V0.0.2 Windows 알파 테스트 빌드입니다. 일반 사용자에게 알린 개발 방향 공지 13가지가 진행되는 버전입니다.",
+      "V0.0.2 Windows·Linux 알파 테스트 빌드입니다. 일반 사용자에게 알린 개발 방향 공지 13가지가 진행되는 버전입니다.",
       "핫픽스: GTX 10 계열처럼 DirectX 12 Ultimate(기능 수준 12_2)를 지원하지 않는 구세대 그래픽카드는 자동으로 Direct3D 11로 실행합니다. 구형 NVIDIA 드라이버에서 시작 직후 꺼지던 문제와, Direct3D 11을 고르면 화면 버퍼 오류로 시작하지 못하던 문제를 고쳤습니다.",
       "핫픽스: 던전·영지·훈련장의 카메라 흔들림을 고쳤습니다. 카메라가 몸 동작 대신 캐릭터 위치를 따라가고, 계단을 내려갈 때 카메라가 당겨졌다 풀리지 않으며, 전투 대상 전환이 부드러워졌고, 런처 설정의 선택 목록이 필드 아래로 펼쳐져 아래 항목까지 고를 수 있습니다.",
       "Windows 10 1709(빌드 16299)부터 Windows 11까지 실행되며, 렌더는 Direct3D 12 → Direct3D 11 → CPU(three.js) 순서로 기기에 맞게 고릅니다. NVIDIA 그래픽카드가 아니어도 실행됩니다.",
@@ -14,10 +14,11 @@
       "여섯 던전과 다섯 레이드 보스의 전장에 들어갈 수 있습니다. 피해를 주고받는 전투 규칙은 설계 중이며, 레이드 보스는 공격하지 않습니다.",
       "자유 카메라(룩앳·바닥 클릭 이동), 정령 도감의 크게 보기, 화면 모드(전용 전체화면·테두리 없음·창 모드)와 해상도, FPS 표시를 설정할 수 있습니다.",
       "개발 모드가 기본으로 켜져 있어 모든 정령이 해금되고 소환·구매가 무제한입니다. 환경설정에서 끌 수 있습니다.",
-      "Linux x86-64 버전은 이식을 진행하고 있습니다(26개 항목 중 16개, 61%). macOS는 지원하지 않습니다."
+      "Linux x86-64 버전도 함께 공개했습니다. glibc 2.43 이상인 x86-64 배포판(예: Ubuntu 26.04)에서 실행할 수 있으며, 런처와 게임 화면은 CEF로 띄우고 CPU(three.js) 렌더로 장면을 보여 줍니다. 시스템 라이브러리 libSDL3.so.0과 libcurl.so.4가 있어야 합니다. Linux용 Vulkan·OpenGL 렌더는 아직 구현하지 않았습니다.",
+      "macOS는 지원하지 않습니다."
     ],
     "en": [
-      "V0.0.2 Windows alpha test build, the version in which the 13 development notices shared with players are put into practice.",
+      "V0.0.2 Windows and Linux alpha test build, the version in which the 13 development notices shared with players are put into practice.",
       "Hotfix: older graphics cards without DirectX 12 Ultimate (feature level 12_2), such as the GTX 10 series, now start with Direct3D 11 automatically. The game no longer closes right after starting on older NVIDIA drivers, and choosing Direct3D 11 no longer fails with a screen buffer error.",
       "Hotfix: the camera no longer shakes in dungeons, the town and the training ground. It follows the character position instead of body animation, no longer pulls in and out going down stairs, switches combat focus smoothly, and launcher setting lists open below the field so every item can be chosen.",
       "Runs on Windows 10 1709 (build 16299) through Windows 11, choosing Direct3D 12 → Direct3D 11 → CPU (three.js) rendering for each device. An NVIDIA graphics card is no longer required.",
@@ -29,7 +30,8 @@
       "You can enter six dungeons and the battlefields of five raid bosses. The rules for dealing and taking damage are still being designed, and raid bosses do not attack.",
       "Free Camera (Look-at and click-to-move), Full View in the collection, window mode (exclusive fullscreen, borderless or windowed) with resolution, and Show FPS are available in settings.",
       "Developer mode is on by default, so every Soul is unlocked and summons and purchases are unlimited. You can turn it off in Settings.",
-      "The Linux x86-64 port is in progress (16 of 26 items, 61%). macOS is not supported."
+      "The Linux x86-64 version is released alongside. It runs on x86-64 distributions with glibc 2.43 or later (for example Ubuntu 26.04); the launcher and game screens are hosted by CEF and rendered with CPU (three.js) rendering. The system libraries libSDL3.so.0 and libcurl.so.4 are required. Vulkan and OpenGL rendering for Linux are not implemented yet.",
+      "macOS is not supported."
     ]
   },
   "V0.0.1": {
