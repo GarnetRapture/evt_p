@@ -19,7 +19,7 @@ export function SiteRoot() {
       <SiteHero text={localeState.text()} />
       <SiteJourney>
       <SiteFeatureSection text={localeState.text()} />
-      <SiteUpdate text={localeState.text()} />
+      <SiteUpdate localeState={localeState} />
       <SiteRoadmap text={localeState.text()} />
       <SiteGuide text={localeState.text()} />
       <SiteDownload localeState={localeState} />

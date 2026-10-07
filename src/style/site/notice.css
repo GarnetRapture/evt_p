@@ -1,0 +1,37 @@
+.site-notice-board {
+  margin-block: var(--site-space-l);
+  padding: var(--site-space-m);
+  border: 1px solid var(--site-line);
+  border-radius: 20px;
+  background: var(--site-ink-soft);
+  color: var(--site-white);
+}
+
+.site-notice-heading { margin: 0; font-size: var(--site-step-2); }
+.site-notice-description { margin: 0.6rem 0 1.5rem; color: var(--site-muted-light); line-height: 1.7; }
+.site-notice-columns, .site-notice-summary { display: grid; grid-template-columns: minmax(0, 1fr) 10rem 7rem; gap: 1rem; align-items: center; }
+.site-notice-columns { padding: 0.75rem 1rem; border-bottom: 1px solid var(--site-line); color: var(--site-muted); font-size: var(--site-step--1); }
+.site-notice-row { border-bottom: 1px solid var(--site-line); }
+.site-notice-summary { padding: 1.2rem 1rem; cursor: pointer; list-style: none; }
+.site-notice-summary::-webkit-details-marker { display: none; }
+.site-notice-summary:hover { background: rgba(185, 165, 233, 0.08); }
+.site-notice-summary:focus-visible { outline: 2px solid var(--site-violet); outline-offset: -2px; border-radius: 8px; }
+.site-notice-subject { display: flex; align-items: center; gap: 0.65rem; min-width: 0; }
+.site-notice-title { font-weight: 700; line-height: 1.5; overflow-wrap: anywhere; }
+.site-notice-version, .site-notice-date { color: var(--site-muted-light); font-size: var(--site-step--1); }
+.site-notice-date { text-align: right; font-variant-numeric: tabular-nums; }
+.site-notice-latest { flex-shrink: 0; padding: 0.2rem 0.45rem; border-radius: 5px; color: var(--site-ink); background: var(--site-violet); font-size: 0.7rem; font-weight: 800; }
+.site-notice-toggle { margin-left: auto; color: var(--site-violet); font-size: 1.2rem; }
+.site-notice-row[open] .site-notice-toggle { transform: rotate(45deg); }
+.site-notice-content { padding: 0 1rem 1.5rem; color: var(--site-muted-light); line-height: 1.8; overflow-wrap: anywhere; }
+.site-notice-content ul { margin: 0; padding-left: 1.3rem; }
+.site-notice-content li + li { margin-top: 0.75rem; }
+.site-notice-release { display: inline-flex; margin-top: 1.25rem; color: var(--site-warm-light); font-weight: 700; text-underline-offset: 0.2em; }
+
+@media (max-width: 719px) {
+  .site-notice-board { padding: 1rem; }
+  .site-notice-columns { display: none; }
+  .site-notice-summary { grid-template-columns: minmax(0, 1fr) auto; gap: 0.5rem; padding-inline: 0; }
+  .site-notice-subject { grid-column: 1 / -1; }
+  .site-notice-content { padding-inline: 0; }
+}

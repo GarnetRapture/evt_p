@@ -55,6 +55,13 @@ export interface SiteText {
   updateDescription: string;
   updatePatchTitle: string;
   updatePatchCaution: string;
+  noticeBoardTitle: string;
+  noticeBoardDescription: string;
+  noticeSubjectLabel: string;
+  noticeVersionLabel: string;
+  noticeDateLabel: string;
+  noticeLatestLabel: string;
+  noticeReleaseLink: string;
   updatePatchItems: readonly UpdatePatchEntry[];
   updateJump: string;
   updateEntries: readonly UpdateEntry[];

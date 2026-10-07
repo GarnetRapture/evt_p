@@ -1,0 +1,52 @@
+[
+  {
+    "id": "windows-webview-20261008",
+    "date": "2026-10-08",
+    "version": "V0.0.2",
+    "platform": "Windows",
+    "title": {
+      "ko": "Radeon 제보 대응 · 화면 오류와 렌더 연결 교정",
+      "en": "Radeon feedback · screen failure and rendering corrections"
+    },
+    "body": {
+      "ko": [
+        "Windows 핫픽스(2026-10-08): 화면이 닫히거나 WebView2 오류가 발생한 뒤 입력·화면 메시지 처리가 계속되던 경로를 교정하고, 최초 화면 프로세스 실패의 원인·종료값·진단 위치를 로그에 남깁니다. Radeon 제보 환경의 실행 결과는 새 배포본으로 피드백을 받습니다.",
+        "Windows Vulkan·OpenGL의 네이티브 설정과 셰이더 명령·메모리 배치 연결을 교정했습니다. 기존 런처 화면의 선택 목록은 유지되며, 그래픽카드별 실제 실행·정상 지원 확인은 테스터 로그와 함께 진행합니다.",
+        "이번 Windows 핫픽스는 게임·런처 실행 파일과 설정을 갱신합니다. 기존 웹 화면·게임 데이터·의존 라이브러리와 Linux 배포본은 유지합니다.",
+        "이미 V0.0.2를 설치하셨다면 Windows ZIP을 다시 받아 기존 폴더에 덮어써 주세요. 기존 게임 데이터 팩과 저장 데이터는 그대로 사용합니다."
+      ],
+      "en": [
+        "Windows hotfix (2026-10-08): corrected input and screen-message processing after window closure or WebView2 failure. Logs now retain the first screen-process failure reason, exit code and diagnostic location. Radeon testers can report results from this build.",
+        "Corrected native settings, shader instructions and memory-layout connections for Windows Vulkan and OpenGL. The existing launcher selection list is preserved; GPU execution and support acceptance require tester logs.",
+        "This Windows hotfix updates the game and launcher executables and settings. Existing web screens, game data, runtime libraries and the Linux release are preserved.",
+        "If V0.0.2 is already installed, download the Windows ZIP again and extract it over the existing folder. Installed game packs and saved data remain usable."
+      ]
+    },
+    "releaseUrl": "https://github.com/GarnetRapture/evt_p/releases/tag/V0.0.2"
+  },
+  {
+    "id": "windows-legacy-camera-20261005",
+    "date": "2026-10-05",
+    "version": "V0.0.2",
+    "platform": "Windows",
+    "title": {
+      "ko": "구형 그래픽카드 · 카메라 · 런처 설정 핫픽스",
+      "en": "Older graphics cards, camera and launcher settings hotfix"
+    },
+    "body": {
+      "ko": [
+        "GTX 10 계열처럼 DirectX 12 Ultimate(기능 수준 12_2)를 지원하지 않는 구세대 그래픽카드는 자동으로 Direct3D 11로 실행합니다. 구형 NVIDIA 드라이버에서 시작 직후 꺼지던 문제와, Direct3D 11을 고르면 화면 버퍼 오류로 시작하지 못하던 문제를 고쳤습니다.",
+        "던전·영지·훈련장에서 카메라가 흔들리던 문제를 고쳤습니다. 카메라가 몸 동작 대신 캐릭터 위치를 따라가고, 계단을 내려갈 때 뒤쪽 계단에 시선이 걸려 카메라가 당겨졌다 풀리던 현상이 없어졌으며, 전투 대상 전환이 부드러워지고 체력바와 피해 숫자가 장면과 같은 카메라로 표시됩니다.",
+        "런처 설정의 선택 목록이 필드 아래로 펼쳐지고, 글자가 잘 보이며 아래 항목까지 스크롤할 수 있습니다.",
+        "Windows 11 26H2(빌드 26300)를 지원 범위로 판정합니다."
+      ],
+      "en": [
+        "Older graphics cards without DirectX 12 Ultimate (feature level 12_2), such as the GTX 10 series, start with Direct3D 11 automatically. Corrected startup closure on older NVIDIA drivers and screen-buffer failure when selecting Direct3D 11.",
+        "Corrected camera shake in dungeons, the town and the training ground. The camera follows character position instead of body animation, no longer pulls in and out on stairs, switches combat focus smoothly, and uses the scene camera for health bars and damage numbers.",
+        "Launcher setting lists open below the field, show readable text and scroll to the last item.",
+        "Windows 11 26H2 (build 26300) is recognized within the supported operating-system range."
+      ]
+    },
+    "releaseUrl": "https://github.com/GarnetRapture/evt_p/releases/tag/V0.0.2"
+  }
+]
