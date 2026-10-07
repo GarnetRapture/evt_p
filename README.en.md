@@ -48,6 +48,8 @@ You may need [DirectX 12](https://support.microsoft.com/help/179113), an [NVIDIA
 
 ### V0.0.2 patch notes
 
+The 2026-10-08 Windows hotfix corrects input and message lifetimes after window closure or WebView2 failure and adds first-failure diagnostics. It also corrects native settings and shader connections for Vulkan and OpenGL. Existing web screens, game data and the Linux release are preserved; Radeon and GPU execution results require tester feedback from this build.
+
 V0.0.2 brings the startup, display and music fixes shaped by first-release tester reports and the implementation of the development notices. These changes ship in the V0.0.2 Windows and Linux releases.
 
 - AMD graphics cards no longer start the NVIDIA calculation path. The cause of the startup crash is still under review. (T-A1)
