@@ -18,7 +18,7 @@
     "@types/three": "0.186.0",
     "oxlint": "^1.85.0",
     "typescript": "~6.0.2",
-    "vite": "^8.3.1",
+    "vite": "^8.3.4",
     "vite-plugin-solid": "^2.11.14"
   }
 }
